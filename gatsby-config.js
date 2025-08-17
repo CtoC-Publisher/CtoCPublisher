@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Sydney Ecommerce Theme`,
-    siteUrl: `https://jamm.matter.design`,
+    title: `CtoC Publisher - Independent Publishing House`,
+    siteUrl: `https://ctoc-publisher.github.io/CtoCPublisher`,
   },
+  pathPrefix: "/CtoCPublisher",
   plugins: [],
 };
