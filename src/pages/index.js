@@ -18,7 +18,7 @@ import { Link, navigate } from 'gatsby';
 import { toOptimizedImage } from '../helpers/general';
 
 const IndexPage = () => {
-  const newArrivals = generateMockProductData(3, 'shirt');
+  const newArrivals = generateMockProductData(3, 'fiction');
   const blogData = generateMockBlogData(3);
 
   const goToShop = () => {
@@ -31,28 +31,28 @@ const IndexPage = () => {
       <Hero
         maxWidth={'500px'}
         image={'/banner1.png'}
-        title={'Essentials for a cold winter'}
-        subtitle={'Discover Autumn Winter 2021'}
-        ctaText={'shop now'}
+        title={'Discover Your Next Great Read'}
+        subtitle={'Curated Books for Every Reader'}
+        ctaText={'browse books'}
         ctaAction={goToShop}
       />
 
       {/* Message Container */}
       <div className={styles.messageContainer}>
         <p>
-          This is a demonstration of the Sydney theme for verse by{' '}
-          <span className={styles.gold}>matter design.</span>
+          Welcome to <span className={styles.gold}>CtoC Publisher</span> - your premier destination for{' '}
+          <span className={styles.gold}>exceptional literature.</span>
         </p>
         <p>
-          wear by <span className={styles.gold}>sunspel</span> and{' '}
-          <span className={styles.gold}>scotch&soda</span>
+          publishing bestsellers, classics, and{' '}
+          <span className={styles.gold}>emerging voices</span>
         </p>
       </div>
 
       {/* Collection Container */}
       <div className={styles.collectionContainer}>
         <Container size={'large'}>
-          <Title name={'New Collection'} />
+          <Title name={'Featured Collections'} />
           <ProductCollectionGrid />
         </Container>
       </div>
@@ -60,7 +60,7 @@ const IndexPage = () => {
       {/* New Arrivals */}
       <div className={styles.newArrivalsContainer}>
         <Container>
-          <Title name={'New Arrivals'} link={'/shop'} textLink={'view all'} />
+          <Title name={'New Releases'} link={'/shop'} textLink={'view all'} />
           <ProductCardGrid
             spacing={true}
             showSlider
@@ -79,9 +79,9 @@ const IndexPage = () => {
             altImage={'highlight image'}
             miniImage={'/highlightmin.png'}
             miniImageAlt={'mini highlight image'}
-            title={'Luxury Knitwear'}
-            description={`This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife`}
-            textLink={'shop now'}
+            title={'Staff Picks'}
+            description={`Handpicked by our knowledgeable staff, these books represent the finest in contemporary and classic literature`}
+            textLink={'explore picks'}
             link={'/shop'}
           />
         </Container>
@@ -89,17 +89,17 @@ const IndexPage = () => {
 
       {/* Promotion */}
       <div className={styles.promotionContainer}>
-        <Hero image={toOptimizedImage('/banner2.png')} title={`-50% off \n All Essentials`} />
+        <Hero image={toOptimizedImage('/banner2.png')} title={`Book Club Special \n 20% Off Selected Titles`} />
         <div className={styles.linkContainers}>
-          <Link to={'/shop'}>WOMAN</Link>
-          <Link to={'/shop'}>MAN</Link>
+          <Link to={'/shop'}>FICTION</Link>
+          <Link to={'/shop'}>NON-FICTION</Link>
         </div>
       </div>
 
       {/* Quote */}
       <Quote
         bgColor={'var(--standard-light-grey)'}
-        title={'about Sydney'}
+        title={'about CtoC'}
         quote={
           '“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”'
         }
@@ -108,7 +108,7 @@ const IndexPage = () => {
       {/* Blog Grid */}
       <div className={styles.blogsContainer}>
         <Container size={'large'}>
-          <Title name={'Journal'} subtitle={'Notes on life and style'} />
+          <Title name={'Book Reviews'} subtitle={'Insights and recommendations from our team'} />
           <BlogPreviewGrid data={blogData} />
         </Container>
       </div>
@@ -130,8 +130,8 @@ const IndexPage = () => {
       {/* Social Media */}
       <div className={styles.socialContainer}>
         <Title
-          name={'Styled by You'}
-          subtitle={'Tag @sydney to be featured.'}
+          name={'Reading Community'}
+          subtitle={'Tag @ctocpublisher to share your latest read.'}
         />
         <div className={styles.socialContentGrid}>
           <img src={toOptimizedImage(`/social/socialMedia1.png`)} alt={'social media 1'} />

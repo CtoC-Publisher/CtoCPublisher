@@ -12,10 +12,10 @@
     { "value": "mandarin", "label": "普通话" }
   ],
   "social": {
-    "facebook": "https://www.facebook.com/MatterDesign/",
-    "instagram": "https://www.instagram.com/p/CVwMlChIWmW",
-    "twitter": "https://twitter.com/hellomatter",
-    "youtube": "https://www.youtube.com/channel/UCEOu94Haa--QmltsSawflXg"
+    "facebook": "https://www.facebook.com/ctocpublisher/",
+    "instagram": "https://www.instagram.com/ctocpublisher",
+    "twitter": "https://twitter.com/ctocpublisher",
+    "youtube": "https://www.youtube.com/channel/ctocpublisher"
   },
   "paymentOptions": {
     "visa": true,
@@ -24,19 +24,23 @@
   },
   "footerLinks": [
     {
-      "subTitle": "Info",
+      "subTitle": "Publisher",
       "links": [
         {
-          "text": "About Us",
+          "text": "About CtoC",
           "link": "/about"
         },
         {
-          "text": "Journal",
+          "text": "Book Reviews",
           "link": "/blog"
         },
         {
-          "text": "Privacy Policy",
-          "link": "/support#policy"
+          "text": "Author Events",
+          "link": "/events"
+        },
+        {
+          "text": "Book Clubs",
+          "link": "/book-clubs"
         }
       ]
     },
@@ -56,80 +60,88 @@
           "link": "/support#returns"
         },
         {
-          "text": "How to use this theme",
-          "link": "/how-to-use"
+          "text": "Gift Cards",
+          "link": "/gift-cards"
         }
       ]
     }
   ],
   "headerLinks": [
     {
-      "menuLabel": "Shop",
+      "menuLabel": "Books",
       "menuLink": "/shop",
       "category": [
         {
-          "categoryLabel": "woman",
+          "categoryLabel": "Fiction",
           "submenu": [
             {
-              "menuLabel": "All clothing",
-              "menuLink": "/shop"
+              "menuLabel": "All Fiction",
+              "menuLink": "/shop?category=fiction"
             },
             {
-              "menuLabel": "sweatshirts & hoodies",
-              "menuLink": "/shop"
+              "menuLabel": "Literary Fiction",
+              "menuLink": "/shop?category=literary"
             },
             {
-              "menuLabel": "jackets",
-              "menuLink": "/shop"
+              "menuLabel": "Mystery & Thriller",
+              "menuLink": "/shop?category=mystery"
             },
             {
-              "menuLabel": "trousers",
-              "menuLink": "/shop"
+              "menuLabel": "Science Fiction",
+              "menuLink": "/shop?category=scifi"
+            },
+            {
+              "menuLabel": "Romance",
+              "menuLink": "/shop?category=romance"
             }
           ]
         },
         {
-          "categoryLabel": "men",
+          "categoryLabel": "Non-Fiction",
           "submenu": [
             {
-              "menuLabel": "All clothing",
-              "menuLink": "/shop"
+              "menuLabel": "All Non-Fiction",
+              "menuLink": "/shop?category=nonfiction"
             },
             {
-              "menuLabel": "sweatshirts & hoodies",
-              "menuLink": "/shop"
+              "menuLabel": "Biography",
+              "menuLink": "/shop?category=biography"
             },
             {
-              "menuLabel": "jackets",
-              "menuLink": "/shop"
+              "menuLabel": "History",
+              "menuLink": "/shop?category=history"
             },
             {
-              "menuLabel": "trousers",
-              "menuLink": "/shop"
+              "menuLabel": "Self-Help",
+              "menuLink": "/shop?category=selfhelp"
             },
             {
-              "menuLabel": "pants",
-              "menuLink": "/shop"
+              "menuLabel": "Business",
+              "menuLink": "/shop?category=business"
             }
           ]
         },
         {
-          "categoryLabel": "accessories",
+          "categoryLabel": "Children's",
           "submenu": [
             {
-              "menuLabel": "caps & scarves",
-              "menuLink": "/shop"
+              "menuLabel": "Picture Books",
+              "menuLink": "/shop?category=picture"
             },
             {
-              "menuLabel": "bags",
-              "menuLink": "/shop"
+              "menuLabel": "Young Adult",
+              "menuLink": "/shop?category=ya"
+            },
+            {
+              "menuLabel": "Educational",
+              "menuLink": "/shop?category=educational"
             }
           ]
         }
       ]
     },
     {
-      "menuLabel": "journal",
+      "menuLabel": "Reviews",
       "menuLink": "/blog",
       "category": null
     },
@@ -141,36 +153,31 @@
   ],
   "filters": [
     {
-      "category": "colour",
+      "category": "genre",
       "items": [
-        { "name": "Black", "value": true },
-        { "name": "Green", "value": false },
-        { "name": "Dark Blue", "value": false },
-        { "name": "Blue", "value": true },
-        { "name": "Grey", "value": false },
-        { "name": "Red", "value": false }
-      ]
-    },
-
-    {
-      "category": "size",
-      "items": [
-        { "name": "XXS", "value": false },
-        { "name": "XS", "value": false },
-        { "name": "S", "value": false },
-        { "name": "M", "value": false },
-        { "name": "L", "value": false },
-        { "name": "XL", "value": false },
-        { "name": "XXL", "value": false },
-        { "name": "Onesize", "value": false }
+        { "name": "Fiction", "value": true },
+        { "name": "Non-Fiction", "value": false },
+        { "name": "Mystery", "value": false },
+        { "name": "Romance", "value": false },
+        { "name": "Sci-Fi", "value": false },
+        { "name": "Biography", "value": false }
       ]
     },
     {
-      "category": "gender",
+      "category": "format",
       "items": [
-        { "name": "Male", "value": false },
-        { "name": "Female", "value": false },
-        { "name": "Unisex", "value": false }
+        { "name": "Hardcover", "value": false },
+        { "name": "Paperback", "value": false },
+        { "name": "E-book", "value": false },
+        { "name": "Audiobook", "value": false }
+      ]
+    },
+    {
+      "category": "age",
+      "items": [
+        { "name": "Children", "value": false },
+        { "name": "Young Adult", "value": false },
+        { "name": "Adult", "value": false }
       ]
     }
   ]

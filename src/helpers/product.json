@@ -1,115 +1,124 @@
 [
     {
-        "productCode": "MJUM8066-GYDZ",
-        "name": "Lambswool Crew Neck Jumper",
-        "vendor": "Sunspel",
-        "price": 75,
-        "alt": "lambswool crew neck jumper",
+        "productCode": "ISBN-9780143127741",
+        "name": "The Seven Husbands of Evelyn Hugo",
+        "vendor": "Taylor Jenkins Reid",
+        "price": 16.99,
+        "alt": "The Seven Husbands of Evelyn Hugo book cover",
         "image": "/products/pdp1.jpeg",
-        "colorOptions": [
-            {"color": "#000000", "title": "Anthracite Melange"},
-            {"color": "#4D34AE", "title": "Pale Purple"},
-            {"color": "#488266", "title": "Green Moss"}
+        "formatOptions": [
+            {"format": "hardcover", "title": "Hardcover", "price": 26.99},
+            {"format": "paperback", "title": "Paperback", "price": 16.99},
+            {"format": "ebook", "title": "E-book", "price": 12.99}
         ],
-        "sizeOptions": ["xs", "s", "m", "l", "xl"],
         "wishlist": true,
-        "tags": ["sample"],
+        "tags": ["fiction", "bestseller"],
         "gallery": [
-            {"image": "/products/pdp1.jpeg", "alt": "pdp description 1"},
-            {"image": "/products/pdp2.jpeg", "alt": "pdp description 2"},
-            {"image": "/products/pdp3.jpeg", "alt": "pdp description 3"},
-            {"image": "/products/pdp4.jpeg", "alt": "pdp description 4"}
+            {"image": "/products/pdp1.jpeg", "alt": "book cover front"},
+            {"image": "/products/pdp2.jpeg", "alt": "book cover back"},
+            {"image": "/products/pdp3.jpeg", "alt": "book spine"},
+            {"image": "/products/pdp4.jpeg", "alt": "book pages"}
         ],
-        "description": "This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife. Once knitted, the garment is washed in Scottish spring water to make it beautifully soft."
+        "description": "A captivating novel about a reclusive Hollywood icon who finally decides to tell her story to a young journalist, revealing stunning secrets about her life and career."
     },
     {
-        "name": "Classic T-Shirt",
-        "price": 75,
-        "alt": "classic t-shirt 1",
+        "name": "Atomic Habits",
+        "vendor": "James Clear",
+        "price": 18.99,
+        "alt": "Atomic Habits book cover",
         "image": "/products/shirt1.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["self-help", "bestseller"]
     },
     {
-        "name": "Classic T-Shirt",
-        "price": 75,
-        "alt": "classic t-shirt 2",
+        "name": "The Thursday Murder Club",
+        "vendor": "Richard Osman",
+        "price": 15.99,
+        "alt": "The Thursday Murder Club book cover",
         "image": "/products/shirt2.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["mystery", "fiction"]
     },
     {
-        "name": "Classic T-Shirt",
-        "price": 75,
-        "alt": "classic t-shirt 3",
+        "name": "Educated",
+        "vendor": "Tara Westover",
+        "price": 17.99,
+        "alt": "Educated memoir book cover",
         "image": "/products/shirt3.jpg",
-        "tags": ["shirt", "men"]
+        "tags": ["memoir", "non-fiction"]
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 13.90,
-        "alt": "relaxed t shirt woman",
+        "name": "The Midnight Library",
+        "vendor": "Matt Haig",
+        "price": 14.99,
+        "alt": "The Midnight Library book cover",
         "image": "/products/woman1.jpeg",
-        "tags": ["woman"],
-        "meta": "+ 2 colors"
+        "tags": ["fiction", "philosophical"],
+        "meta": "+ audiobook"
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 15.90,
-        "alt": "relaxed t shirt woman",
+        "name": "Klara and the Sun",
+        "vendor": "Kazuo Ishiguro",
+        "price": 16.99,
+        "alt": "Klara and the Sun book cover",
         "image": "/products/woman2.jpeg",
-        "tags": ["woman"]
+        "tags": ["literary-fiction"]
     },    
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 13.90,
-        "alt": "relaxed t shirt woman",
+        "name": "The Invisible Life of Addie LaRue",
+        "vendor": "V.E. Schwab",
+        "price": 15.99,
+        "alt": "The Invisible Life of Addie LaRue book cover",
         "image": "/products/woman3.jpeg",
-        "tags": ["woman"],
-        "meta": "+ 2 colors"
+        "tags": ["fantasy", "romance"],
+        "meta": "+ audiobook"
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 15.90,
-        "alt": "relaxed t shirt woman",
+        "name": "Project Hail Mary",
+        "vendor": "Andy Weir",
+        "price": 17.99,
+        "alt": "Project Hail Mary book cover",
         "image": "/products/woman4.jpeg",
-        "tags": ["woman"]
+        "tags": ["sci-fi"]
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 15.90,
-        "alt": "relaxed t shirt woman",
+        "name": "The Guest List",
+        "vendor": "Lucy Foley",
+        "price": 14.99,
+        "alt": "The Guest List book cover",
         "image": "/products/woman5.jpeg",
-        "tags": ["woman"],
-        "originalPrice": 31.50
-
+        "tags": ["thriller"],
+        "originalPrice": 24.99
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 21,
-        "alt": "relaxed t shirt woman",
+        "name": "Circe",
+        "vendor": "Madeline Miller",
+        "price": 16.99,
+        "alt": "Circe book cover",
         "image": "/products/woman6.jpeg",
-        "tags": ["woman"]
+        "tags": ["mythology", "fiction"]
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 15.90,
-        "alt": "relaxed t shirt woman",
+        "name": "The Silent Patient",
+        "vendor": "Alex Michaelides",
+        "price": 15.99,
+        "alt": "The Silent Patient book cover",
         "image": "/products/woman3.jpeg",
-        "tags": ["woman"]
+        "tags": ["psychological-thriller"]
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 15.90,
-        "alt": "relaxed t shirt woman",
+        "name": "Where the Crawdads Sing",
+        "vendor": "Delia Owens",
+        "price": 15.99,
+        "alt": "Where the Crawdads Sing book cover",
         "image": "/products/woman2.jpeg",
-        "tags": ["woman"],
-        "originalPrice": 31.50
-
+        "tags": ["fiction", "bestseller"],
+        "originalPrice": 26.99
     },
     {
-        "name": "Relaxed-fit graphic T-shirt",
-        "price": 21,
-        "alt": "relaxed t shirt woman",
+        "name": "The Vanishing Half",
+        "vendor": "Brit Bennett",
+        "price": 16.99,
+        "alt": "The Vanishing Half book cover",
         "image": "/products/woman1.jpeg",
-        "tags": ["woman"]
+        "tags": ["literary-fiction"]
     }
   ]
