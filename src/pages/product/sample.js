@@ -27,9 +27,11 @@ const ProductPage = (props) => {
   const [qty, setQty] = useState(0);
   const [isWishlist, setIsWishlist] = useState(false);
   const [activeSwatch, setActiveSwatch] = useState(
-    sampleProduct.colorOptions[0]
+    sampleProduct.formatOptions ? sampleProduct.formatOptions[0] : null
   );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
+  const [activeSize, setActiveSize] = useState(
+    sampleProduct.formatOptions ? sampleProduct.formatOptions[0] : null
+  );
   const suggestions = generateMockProductData(4, 'woman');
 
   return (
@@ -39,8 +41,8 @@ const ProductPage = (props) => {
           <Breadcrumbs
             crumbs={[
               { link: '/', label: 'Home' },
-              { label: 'Men', link: '/shop' },
-              { label: 'Sweater', link: '/shop' },
+              { label: 'Books', link: '/shop' },
+              { label: 'Fiction', link: '/shop' },
               { label: `${sampleProduct.name}` },
             ]}
           />
@@ -56,21 +58,15 @@ const ProductPage = (props) => {
                 <CurrencyFormatter appendZero amount={sampleProduct.price} />
               </div>
 
-              <div>
-                <SwatchList
-                  swatchList={sampleProduct.colorOptions}
-                  activeSwatch={activeSwatch}
-                  setActiveSwatch={setActiveSwatch}
-                />
-              </div>
-
-              <div className={styles.sizeContainer}>
-                <SizeList
-                  sizeList={sampleProduct.sizeOptions}
-                  activeSize={activeSize}
-                  setActiveSize={setActiveSize}
-                />
-              </div>
+              {sampleProduct.formatOptions && (
+                <div>
+                  <SwatchList
+                    swatchList={sampleProduct.formatOptions}
+                    activeSwatch={activeSwatch}
+                    setActiveSwatch={setActiveSwatch}
+                  />
+                </div>
+              )}
 
               <div className={styles.quantityContainer}>
                 <span>Quantity</span>
