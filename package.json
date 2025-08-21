@@ -1,20 +1,21 @@
 {
-  "name": "ctoc-bookshop",
+  "name": "ctoc-publisher",
   "version": "1.0.0",
   "private": true,
-  "description": "CTOC Books - Independent bookshop e-commerce site built with Gatsby.",
-  "author": "CTOC Books",
+  "description": "CtoC Publisher - Independent publishing house e-commerce site built with Gatsby.",
+  "author": "CtoC Publisher",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop -p 5000",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "plop": "plop"
+    "plop": "plop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^5.13.3",
@@ -25,6 +26,7 @@
     "react-slick": "^0.30.2"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "plop": "^3.0.5",
     "prettier": "^3.2.5"
   }
