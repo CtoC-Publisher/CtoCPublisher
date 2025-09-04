@@ -160,14 +160,36 @@ npm start
 - `/src/components/ProductCollectionGrid/` - Update categories
 - `/static/products/` - Replace with book cover images
 
-## Deployment 🚀
+## Automated Deployment 🚀
 
+### One-Click Netlify Deployment
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CtoC-Publisher/CtoCPublisher)
+
+**Instant Bookshop Setup:**
+1. Click deploy button above
+2. Connect GitHub account
+3. Set environment variables (business name, affiliate ID)
+4. Your bookshop goes live automatically!
+
+### Manual Deployment
 Deploy to Netlify, Vercel, or any static hosting service:
 
 ```bash
 npm run build
 # Upload 'public' folder to your hosting provider
 ```
+
+### KIRO SPEC - Automation Framework
+📋 **See [KIRO-SPEC.md](./KIRO-SPEC.md)** for complete automated deployment specifications including:
+- Environment variable configuration
+- Gatsby plugin auto-setup
+- Amazon affiliate integration
+- Netlify Functions for dynamic content
+- Content management system
+- Performance optimization
+- SEO automation
+
+**Perfect for agencies and developers** who need to deploy multiple bookshop websites with zero manual configuration.
 
 ---
 
