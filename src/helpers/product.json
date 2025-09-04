@@ -1,124 +1,103 @@
 [
     {
-        "productCode": "ISBN-9780143127741",
+        "productCode": "B08FF8HJRZ",
+        "name": "Fourth Wing",
+        "vendor": "Rebecca Yarros",
+        "price": 18.99,
+        "alt": "Fourth Wing book cover",
+        "image": "/products/pdp1.jpeg",
+        "amazonUrl": "https://www.amazon.com/dp/B08FF8HJRZ",
+        "tags": ["fantasy", "romance", "bestseller"],
+        "description": "Enter the brutal and elite war college, where dragon riders are made and the weak don't survive."
+    },
+    {
+        "productCode": "B07N4C2P6C",
+        "name": "Atomic Habits",
+        "vendor": "James Clear",
+        "price": 13.99,
+        "alt": "Atomic Habits book cover",
+        "image": "/products/shirt1.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B07N4C2P6C",
+        "tags": ["self-help", "bestseller", "productivity"]
+    },
+    {
+        "productCode": "B08KGF7V1V",
+        "name": "It Ends with Us",
+        "vendor": "Colleen Hoover",
+        "price": 16.99,
+        "alt": "It Ends with Us book cover",
+        "image": "/products/shirt2.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B08KGF7V1V",
+        "tags": ["romance", "contemporary", "bestseller"]
+    },
+    {
+        "productCode": "B08FF8HJRZ",
         "name": "The Seven Husbands of Evelyn Hugo",
         "vendor": "Taylor Jenkins Reid",
         "price": 16.99,
         "alt": "The Seven Husbands of Evelyn Hugo book cover",
-        "image": "/products/pdp1.jpeg",
-        "formatOptions": [
-            {"format": "hardcover", "title": "Hardcover", "price": 26.99},
-            {"format": "paperback", "title": "Paperback", "price": 16.99},
-            {"format": "ebook", "title": "E-book", "price": 12.99}
-        ],
-        "wishlist": true,
-        "tags": ["fiction", "bestseller"],
-        "gallery": [
-            {"image": "/products/pdp1.jpeg", "alt": "book cover front"},
-            {"image": "/products/pdp2.jpeg", "alt": "book cover back"},
-            {"image": "/products/pdp3.jpeg", "alt": "book spine"},
-            {"image": "/products/pdp4.jpeg", "alt": "book pages"}
-        ],
-        "description": "A captivating novel about a reclusive Hollywood icon who finally decides to tell her story to a young journalist, revealing stunning secrets about her life and career."
+        "image": "/products/shirt3.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B01LZPQZJY",
+        "tags": ["fiction", "historical", "bestseller"]
     },
     {
-        "name": "Atomic Habits",
-        "vendor": "James Clear",
-        "price": 18.99,
-        "alt": "Atomic Habits book cover",
-        "image": "/products/shirt1.jpg",
-        "tags": ["self-help", "bestseller"]
+        "productCode": "B08FF8HJRZ",
+        "name": "Where the Crawdads Sing",
+        "vendor": "Delia Owens",
+        "price": 15.99,
+        "alt": "Where the Crawdads Sing book cover",
+        "image": "/products/woman1.jpeg",
+        "amazonUrl": "https://www.amazon.com/dp/B075F7N5ZQ",
+        "tags": ["fiction", "mystery", "bestseller"]
     },
     {
+        "productCode": "B08FF8HJRZ",
         "name": "The Thursday Murder Club",
         "vendor": "Richard Osman",
         "price": 15.99,
         "alt": "The Thursday Murder Club book cover",
-        "image": "/products/shirt2.jpg",
-        "tags": ["mystery", "fiction"]
+        "image": "/products/woman2.jpeg",
+        "amazonUrl": "https://www.amazon.com/dp/B084DWM8Q5",
+        "tags": ["mystery", "cozy-mystery", "bestseller"]
     },
     {
-        "name": "Educated",
-        "vendor": "Tara Westover",
-        "price": 17.99,
-        "alt": "Educated memoir book cover",
-        "image": "/products/shirt3.jpg",
-        "tags": ["memoir", "non-fiction"]
-    },
-    {
+        "productCode": "B08FF8HJRZ",
         "name": "The Midnight Library",
         "vendor": "Matt Haig",
         "price": 14.99,
         "alt": "The Midnight Library book cover",
-        "image": "/products/woman1.jpeg",
-        "tags": ["fiction", "philosophical"],
-        "meta": "+ audiobook"
-    },
-    {
-        "name": "Klara and the Sun",
-        "vendor": "Kazuo Ishiguro",
-        "price": 16.99,
-        "alt": "Klara and the Sun book cover",
-        "image": "/products/woman2.jpeg",
-        "tags": ["literary-fiction"]
-    },    
-    {
-        "name": "The Invisible Life of Addie LaRue",
-        "vendor": "V.E. Schwab",
-        "price": 15.99,
-        "alt": "The Invisible Life of Addie LaRue book cover",
         "image": "/products/woman3.jpeg",
-        "tags": ["fantasy", "romance"],
-        "meta": "+ audiobook"
+        "amazonUrl": "https://www.amazon.com/dp/B086WP7X7Q",
+        "tags": ["fiction", "philosophical", "bestseller"]
     },
     {
+        "productCode": "B08FF8HJRZ",
         "name": "Project Hail Mary",
         "vendor": "Andy Weir",
         "price": 17.99,
         "alt": "Project Hail Mary book cover",
         "image": "/products/woman4.jpeg",
-        "tags": ["sci-fi"]
+        "amazonUrl": "https://www.amazon.com/dp/B08FHBV4ZX",
+        "tags": ["sci-fi", "space", "bestseller"]
     },
     {
-        "name": "The Guest List",
-        "vendor": "Lucy Foley",
-        "price": 14.99,
-        "alt": "The Guest List book cover",
-        "image": "/products/woman5.jpeg",
-        "tags": ["thriller"],
-        "originalPrice": 24.99
-    },
-    {
-        "name": "Circe",
-        "vendor": "Madeline Miller",
-        "price": 16.99,
-        "alt": "Circe book cover",
-        "image": "/products/woman6.jpeg",
-        "tags": ["mythology", "fiction"]
-    },
-    {
+        "productCode": "B08FF8HJRZ",
         "name": "The Silent Patient",
         "vendor": "Alex Michaelides",
         "price": 15.99,
         "alt": "The Silent Patient book cover",
-        "image": "/products/woman3.jpeg",
-        "tags": ["psychological-thriller"]
+        "image": "/products/woman5.jpeg",
+        "amazonUrl": "https://www.amazon.com/dp/B07BRBZW4R",
+        "tags": ["thriller", "psychological", "bestseller"]
     },
     {
-        "name": "Where the Crawdads Sing",
-        "vendor": "Delia Owens",
-        "price": 15.99,
-        "alt": "Where the Crawdads Sing book cover",
-        "image": "/products/woman2.jpeg",
-        "tags": ["fiction", "bestseller"],
-        "originalPrice": 26.99
-    },
-    {
-        "name": "The Vanishing Half",
-        "vendor": "Brit Bennett",
-        "price": 16.99,
-        "alt": "The Vanishing Half book cover",
-        "image": "/products/woman1.jpeg",
-        "tags": ["literary-fiction"]
+        "productCode": "B08FF8HJRZ",
+        "name": "Educated",
+        "vendor": "Tara Westover",
+        "price": 17.99,
+        "alt": "Educated memoir book cover",
+        "image": "/products/woman6.jpeg",
+        "amazonUrl": "https://www.amazon.com/dp/B072BLVM83",
+        "tags": ["memoir", "non-fiction", "bestseller"]
     }
   ]

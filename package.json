@@ -25,8 +25,12 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gatsby-plugin-postcss": "^6.15.0",
     "gh-pages": "^6.3.0",
     "plop": "^3.0.5",
-    "prettier": "^3.2.5"
+    "postcss": "^8.5.6",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4.1.12"
   }
 }

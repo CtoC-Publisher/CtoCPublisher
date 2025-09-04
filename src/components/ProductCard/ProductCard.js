@@ -17,15 +17,24 @@ const ProductCard = (props) => {
     meta,
     showQuickView,
     height = 580,
+    amazonUrl,
   } = props;
 
   const handleRouteToProduct = () => {
-    navigate('/product/sample');
+    if (amazonUrl) {
+      window.open(amazonUrl, '_blank');
+    } else {
+      navigate('/product/sample');
+    }
   };
 
   const handleQuickView = (e) => {
     e.stopPropagation();
-    showQuickView();
+    if (amazonUrl) {
+      window.open(amazonUrl, '_blank');
+    } else {
+      showQuickView();
+    }
   };
 
   const handleFavorite = (e) => {

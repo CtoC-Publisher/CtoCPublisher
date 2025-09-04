@@ -12,7 +12,7 @@ import * as styles from './QuickView.module.css';
 import { toOptimizedImage } from '../../helpers/general';
 
 const QuickView = (props) => {
-  const { close, buttonTitle = 'Add to Bag' } = props;
+  const { close, buttonTitle = 'Buy on Amazon' } = props;
   const sampleProduct = generateMockProductData(1, 'bestseller')[0] || {};
 
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
@@ -22,9 +22,11 @@ const QuickView = (props) => {
   );
   const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions?.[0] || null);
 
-  const handleAddToBag = () => {
+  const handleBuyOnAmazon = () => {
+    if (sampleProduct.amazonUrl) {
+      window.open(sampleProduct.amazonUrl, '_blank');
+    }
     close();
-    showNotification();
   };
 
   return (
@@ -63,7 +65,7 @@ const QuickView = (props) => {
           </div>
         )}
 
-        <Button onClick={() => handleAddToBag()} fullWidth level={'primary'}>
+        <Button onClick={() => handleBuyOnAmazon()} fullWidth level={'primary'}>
           {buttonTitle}
         </Button>
       </div>

@@ -26,6 +26,7 @@ const ProductCardGrid = (props) => {
           meta={product.meta}
           originalPrice={product.originalPrice}
           link={product.link}
+          amazonUrl={product.amazonUrl}
           showQuickView={() => setShowQuickView(true)}
         />
       );
