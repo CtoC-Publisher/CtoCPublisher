@@ -58,11 +58,11 @@ const OrderSummary = (props) => {
       </div>
       <div className={styles.actionContainer}>
         <Button
-          onClick={() => navigate('/orderConfirm')}
+          onClick={() => window.open('https://amazon.com?tag=ctocpublisher-20', '_blank')}
           fullWidth
           level={'primary'}
         >
-          checkout
+          Continue to Amazon
         </Button>
         <div className={styles.linkContainer}>
           <Link to={'/shop'}>CONTINUE SHOPPING</Link>

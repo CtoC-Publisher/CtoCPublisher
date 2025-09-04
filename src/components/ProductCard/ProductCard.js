@@ -5,6 +5,7 @@ import * as styles from './ProductCard.module.css';
 import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
 import { toOptimizedImage } from '../../helpers/general';
+import { redirectToAmazon, getAmazonUrlFromProduct } from '../../helpers/amazon';
 
 const ProductCard = (props) => {
   const [isWishlist, setIsWishlist] = useState(false);
@@ -21,8 +22,9 @@ const ProductCard = (props) => {
   } = props;
 
   const handleRouteToProduct = () => {
-    if (amazonUrl) {
-      window.open(amazonUrl, '_blank');
+    const amazonLink = amazonUrl || getAmazonUrlFromProduct(props);
+    if (amazonLink) {
+      redirectToAmazon(amazonLink);
     } else {
       navigate('/product/sample');
     }
@@ -30,8 +32,9 @@ const ProductCard = (props) => {
 
   const handleQuickView = (e) => {
     e.stopPropagation();
-    if (amazonUrl) {
-      window.open(amazonUrl, '_blank');
+    const amazonLink = amazonUrl || getAmazonUrlFromProduct(props);
+    if (amazonLink) {
+      redirectToAmazon(amazonLink);
     } else {
       showQuickView();
     }
@@ -56,6 +59,7 @@ const ProductCard = (props) => {
           onClick={(e) => handleQuickView(e)}
         >
           <Icon symbol={'bagPlus'} />
+          <span className={styles.buyText}>Buy on Amazon</span>
         </div>
         <div
           className={styles.heartContainer}

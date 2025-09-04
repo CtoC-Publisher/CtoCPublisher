@@ -60,17 +60,26 @@
     bottom: 0px;
     right: 0px;
 
-    width: 70px;
-    height: 70px;
-    background-color: var(--standard-white);
+    width: 120px;
+    height: 40px;
+    background-color: #FF9900;
+    color: white;
+    border-radius: 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
 
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+.buyText {
+    margin-left: 5px;
+    font-size: 11px;
 }
 
 .imageContainer:hover .bagContainer {

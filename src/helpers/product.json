@@ -6,7 +6,7 @@
         "price": 18.99,
         "alt": "Fourth Wing book cover",
         "image": "/products/pdp1.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B08FF8HJRZ",
+        "amazonUrl": "https://www.amazon.com/dp/B08FF8HJRZ?tag=ctocpublisher-20",
         "tags": ["fantasy", "romance", "bestseller"],
         "description": "Enter the brutal and elite war college, where dragon riders are made and the weak don't survive."
     },
@@ -17,7 +17,7 @@
         "price": 13.99,
         "alt": "Atomic Habits book cover",
         "image": "/products/shirt1.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B07N4C2P6C",
+        "amazonUrl": "https://www.amazon.com/dp/B07N4C2P6C?tag=ctocpublisher-20",
         "tags": ["self-help", "bestseller", "productivity"]
     },
     {
@@ -27,7 +27,7 @@
         "price": 16.99,
         "alt": "It Ends with Us book cover",
         "image": "/products/shirt2.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B08KGF7V1V",
+        "amazonUrl": "https://www.amazon.com/dp/B08KGF7V1V?tag=ctocpublisher-20",
         "tags": ["romance", "contemporary", "bestseller"]
     },
     {
@@ -37,7 +37,7 @@
         "price": 16.99,
         "alt": "The Seven Husbands of Evelyn Hugo book cover",
         "image": "/products/shirt3.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B01LZPQZJY",
+        "amazonUrl": "https://www.amazon.com/dp/B01LZPQZJY?tag=ctocpublisher-20",
         "tags": ["fiction", "historical", "bestseller"]
     },
     {
@@ -47,7 +47,7 @@
         "price": 15.99,
         "alt": "Where the Crawdads Sing book cover",
         "image": "/products/woman1.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B075F7N5ZQ",
+        "amazonUrl": "https://www.amazon.com/dp/B075F7N5ZQ?tag=ctocpublisher-20",
         "tags": ["fiction", "mystery", "bestseller"]
     },
     {
@@ -57,7 +57,7 @@
         "price": 15.99,
         "alt": "The Thursday Murder Club book cover",
         "image": "/products/woman2.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B084DWM8Q5",
+        "amazonUrl": "https://www.amazon.com/dp/B084DWM8Q5?tag=ctocpublisher-20",
         "tags": ["mystery", "cozy-mystery", "bestseller"]
     },
     {
@@ -67,7 +67,7 @@
         "price": 14.99,
         "alt": "The Midnight Library book cover",
         "image": "/products/woman3.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B086WP7X7Q",
+        "amazonUrl": "https://www.amazon.com/dp/B086WP7X7Q?tag=ctocpublisher-20",
         "tags": ["fiction", "philosophical", "bestseller"]
     },
     {
@@ -77,7 +77,7 @@
         "price": 17.99,
         "alt": "Project Hail Mary book cover",
         "image": "/products/woman4.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B08FHBV4ZX",
+        "amazonUrl": "https://www.amazon.com/dp/B08FHBV4ZX?tag=ctocpublisher-20",
         "tags": ["sci-fi", "space", "bestseller"]
     },
     {
@@ -87,7 +87,7 @@
         "price": 15.99,
         "alt": "The Silent Patient book cover",
         "image": "/products/woman5.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B07BRBZW4R",
+        "amazonUrl": "https://www.amazon.com/dp/B07BRBZW4R?tag=ctocpublisher-20",
         "tags": ["thriller", "psychological", "bestseller"]
     },
     {
@@ -97,7 +97,7 @@
         "price": 17.99,
         "alt": "Educated memoir book cover",
         "image": "/products/woman6.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/B072BLVM83",
+        "amazonUrl": "https://www.amazon.com/dp/B072BLVM83?tag=ctocpublisher-20",
         "tags": ["memoir", "non-fiction", "bestseller"]
     },
     {
@@ -107,7 +107,7 @@
         "price": 16.99,
         "alt": "Zero to One business book cover",
         "image": "/products/zero-to-one.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B00J6YBOFQ",
+        "amazonUrl": "https://www.amazon.com/dp/B00J6YBOFQ?tag=ctocpublisher-20",
         "tags": ["business", "non-fiction", "bestseller", "startup"]
     },
     {
@@ -117,7 +117,7 @@
         "price": 15.99,
         "alt": "7 Habits book cover",
         "image": "/products/7-habits.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B08D9WJ9G8",
+        "amazonUrl": "https://www.amazon.com/dp/B08D9WJ9G8?tag=ctocpublisher-20",
         "tags": ["self-help", "non-fiction", "bestseller", "productivity"]
     },
     {
@@ -127,7 +127,7 @@
         "price": 19.99,
         "alt": "Becoming memoir book cover",
         "image": "/products/becoming.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B07RFSSYBH",
+        "amazonUrl": "https://www.amazon.com/dp/B07RFSSYBH?tag=ctocpublisher-20",
         "tags": ["memoir", "non-fiction", "bestseller", "biography"]
     },
     {
@@ -137,7 +137,7 @@
         "price": 18.99,
         "alt": "Sapiens book cover",
         "image": "/products/sapiens.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B00ICN066A",
+        "amazonUrl": "https://www.amazon.com/dp/B00ICN066A?tag=ctocpublisher-20"
         "tags": ["history", "non-fiction", "bestseller", "science"]
     }
   ]
