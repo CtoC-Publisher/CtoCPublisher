@@ -99,5 +99,45 @@
         "image": "/products/woman6.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/B072BLVM83",
         "tags": ["memoir", "non-fiction", "bestseller"]
+    },
+    {
+        "productCode": "B00J6YBOFQ",
+        "name": "Zero to One",
+        "vendor": "Peter Thiel",
+        "price": 16.99,
+        "alt": "Zero to One business book cover",
+        "image": "/products/zero-to-one.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B00J6YBOFQ",
+        "tags": ["business", "non-fiction", "bestseller", "startup"]
+    },
+    {
+        "productCode": "B08D9WJ9G8",
+        "name": "The 7 Habits of Highly Effective People",
+        "vendor": "Stephen R. Covey",
+        "price": 15.99,
+        "alt": "7 Habits book cover",
+        "image": "/products/7-habits.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B08D9WJ9G8",
+        "tags": ["self-help", "non-fiction", "bestseller", "productivity"]
+    },
+    {
+        "productCode": "B07RFSSYBH",
+        "name": "Becoming",
+        "vendor": "Michelle Obama",
+        "price": 19.99,
+        "alt": "Becoming memoir book cover",
+        "image": "/products/becoming.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B07RFSSYBH",
+        "tags": ["memoir", "non-fiction", "bestseller", "biography"]
+    },
+    {
+        "productCode": "B00ICN066A",
+        "name": "Sapiens",
+        "vendor": "Yuval Noah Harari",
+        "price": 18.99,
+        "alt": "Sapiens book cover",
+        "image": "/products/sapiens.jpg",
+        "amazonUrl": "https://www.amazon.com/dp/B00ICN066A",
+        "tags": ["history", "non-fiction", "bestseller", "science"]
     }
   ]

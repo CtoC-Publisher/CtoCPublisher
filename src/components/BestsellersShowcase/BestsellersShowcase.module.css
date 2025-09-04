@@ -1,0 +1,96 @@
+.showcase {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--standard-black);
+  margin-bottom: 16px;
+  opacity: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--standard-dark-grey);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.floatingBooks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingBook {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  opacity: 0.1;
+  animation: bookFloat 6s ease-in-out infinite;
+}
+
+.floatingBook img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.float1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.float2 {
+  top: 60%;
+  right: 8%;
+  animation-delay: 2s;
+}
+
+.float3 {
+  top: 30%;
+  left: 85%;
+  animation-delay: 4s;
+}
+
+@media (max-width: 768px) {
+  .showcase {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .booksGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .floatingBooks {
+    display: none;
+  }
+}

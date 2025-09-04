@@ -10,8 +10,11 @@ import ProductCollectionGrid from '../components/ProductCollectionGrid';
 import ProductCardGrid from '../components/ProductCardGrid';
 import Quote from '../components/Quote';
 import Title from '../components/Title';
+import BestsellersShowcase from '../components/BestsellersShowcase';
+import AnimatedBook from '../components/AnimatedBook';
 
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
+import productData from '../helpers/product.json';
 
 import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
@@ -40,12 +43,12 @@ const IndexPage = () => {
       {/* Message Container */}
       <div className={styles.messageContainer}>
         <p>
-          Welcome to <span className={styles.gold}>CtoC Publisher</span> - your premier destination for{' '}
-          <span className={styles.gold}>exceptional literature.</span>
+          Welcome to <span className={styles.gold}>CtoC Books</span> - your independent bookshop for{' '}
+          <span className={styles.gold}>curated literature.</span>
         </p>
         <p>
-          publishing bestsellers, classics, and{' '}
-          <span className={styles.gold}>emerging voices</span>
+          Featuring bestsellers, classics, and{' '}
+          <span className={styles.gold}>hidden gems</span>
         </p>
       </div>
 
@@ -56,6 +59,9 @@ const IndexPage = () => {
           <ProductCollectionGrid />
         </Container>
       </div>
+
+      {/* Amazon Bestsellers Showcase */}
+      <BestsellersShowcase books={productData} />
 
       {/* New Arrivals */}
       <div className={styles.newArrivalsContainer}>
@@ -99,7 +105,7 @@ const IndexPage = () => {
       {/* Quote */}
       <Quote
         bgColor={'var(--standard-light-grey)'}
-        title={'about CtoC'}
+        title={'about CtoC Books'}
         quote={
           '“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”'
         }
@@ -131,7 +137,7 @@ const IndexPage = () => {
       <div className={styles.socialContainer}>
         <Title
           name={'Reading Community'}
-          subtitle={'Tag @ctocpublisher to share your latest read.'}
+          subtitle={'Tag @ctocbooks to share your latest read.'}
         />
         <div className={styles.socialContentGrid}>
           <img src={toOptimizedImage(`/social/socialMedia1.png`)} alt={'social media 1'} />
