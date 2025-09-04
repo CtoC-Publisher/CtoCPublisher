@@ -4,7 +4,5 @@ module.exports = {
     siteUrl: `https://ctoc-publisher.github.io/CtoCPublisher`,
   },
   pathPrefix: "/CtoCPublisher",
-  plugins: [
-    'gatsby-plugin-postcss',
-  ],
+  plugins: [],
 };
