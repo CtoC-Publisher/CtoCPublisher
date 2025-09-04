@@ -4,7 +4,7 @@
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.18.0"
+  NODE_VERSION = "18.17.0"
 
 ## Rewrite image URLs marked with imgcdn=true to use Netlify Image CDN
 [[redirects]]
