@@ -4,4 +4,4 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-// No longer needed - react-slick has been removed
+// Empty file - no custom node APIs needed
