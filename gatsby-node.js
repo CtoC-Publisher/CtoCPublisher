@@ -9,7 +9,7 @@ exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
   
   // Skip pages that have SSR issues with react-slick
-  if (page.path.includes('/account/') || page.path.includes('/shopV2/')) {
+  if (page.path.includes('/account/') || page.path.includes('/shopV2/') || page.path === '/shop/') {
     deletePage(page);
   }
 };
