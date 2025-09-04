@@ -14,6 +14,7 @@ import BestsellersShowcase from '../components/BestsellersShowcase';
 import AnimatedBook from '../components/AnimatedBook';
 import Top10Bestsellers from '../components/Top10Bestsellers';
 import CategoryFlood from '../components/CategoryFlood';
+import AmazonHero from '../components/AmazonHero';
 
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 import productData from '../helpers/product.json';
@@ -36,11 +37,14 @@ const IndexPage = () => {
       <Hero
         maxWidth={'500px'}
         image={'/banner1.png'}
-        title={'Discover Your Next Great Read'}
-        subtitle={'Curated Books for Every Reader'}
-        ctaText={'browse books'}
+        title={'Amazon Bestsellers & More'}
+        subtitle={'Shop Top-Rated Books with Direct Amazon Links'}
+        ctaText={'shop amazon books'}
         ctaAction={goToShop}
       />
+
+      {/* Amazon Integration Banner */}
+      <AmazonHero />
 
       {/* Message Container */}
       <div className={styles.messageContainer}>

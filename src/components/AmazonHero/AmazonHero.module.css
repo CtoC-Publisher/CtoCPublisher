@@ -1,0 +1,30 @@
+.amazonHero {
+  background: linear-gradient(135deg, #FF9900, #FFB84D);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.amazonBadge {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.affiliateId {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
