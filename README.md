@@ -4,6 +4,7 @@ A customized Gatsby e-commerce site for CTOC Books, an independent bookshop spec
 
 ## Features
 
+- **Amazon Integration**: Top-selling books with direct Amazon purchase links 🛒
 - **Book Categories**: Fiction, Non-Fiction, Children's books with detailed subcategories 📖
 - **Staff Picks**: Curated recommendations from knowledgeable staff 🎯
 - **Book Reviews**: Insights and recommendations from the team 📝
@@ -29,17 +30,26 @@ Visit `http://localhost:5000` to see your bookshop site. 🌐
 
 ### Adding New Books 📚
 
-Edit `/src/helpers/product.json` to add new books:
+Edit `/src/helpers/product.json` to add new books with Amazon links:
 
 ```json
 {
   "name": "Book Title",
   "vendor": "Author Name", 
   "price": 16.99,
+  "amazonUrl": "https://www.amazon.com/dp/PRODUCT_ID",
   "tags": ["fiction", "bestseller"],
   "description": "Book description..."
 }
 ```
+
+### Amazon Integration 🛒
+
+The site features popular Amazon bestsellers with direct purchase links:
+- **Current Books**: Fourth Wing, Atomic Habits, It Ends with Us, and more
+- **Click Behavior**: All book clicks redirect to Amazon product pages
+- **Button Text**: "Buy on Amazon" instead of "Add to Cart"
+- **Revenue**: Ready for Amazon affiliate program integration
 
 ### Navigation & Categories 🧭
 
@@ -66,6 +76,7 @@ Customize `/src/pages/index.js` for:
 - [Gatsby](https://www.gatsbyjs.com/) - React-based static site generator
 - [CSS Modules](https://github.com/css-modules/css-modules) - Scoped styling
 - [React Helmet](https://github.com/nfl/react-helmet) - Document head management
+- **Amazon Integration** - Direct product linking and affiliate-ready
 
 ## Deployment 🚀
 
