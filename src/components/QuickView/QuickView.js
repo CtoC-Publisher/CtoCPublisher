@@ -13,14 +13,14 @@ import { toOptimizedImage } from '../../helpers/general';
 
 const QuickView = (props) => {
   const { close, buttonTitle = 'Add to Bag' } = props;
-  const sampleProduct = generateMockProductData(1, 'sample')[0];
+  const sampleProduct = generateMockProductData(1, 'bestseller')[0] || {};
 
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotification = ctxAddItemNotification.showNotification;
   const [activeSwatch, setActiveSwatch] = useState(
-    sampleProduct.colorOptions[0]
+    sampleProduct.colorOptions?.[0] || null
   );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
+  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions?.[0] || null);
 
   const handleAddToBag = () => {
     close();
@@ -34,30 +34,34 @@ const QuickView = (props) => {
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.productContainer}>
-          <span className={styles.productName}>{sampleProduct.name}</span>
+          <span className={styles.productName}>{sampleProduct.name || 'Product Name'}</span>
           <div className={styles.price}>
-            <CurrencyFormatter amount={sampleProduct.price}></CurrencyFormatter>
+            <CurrencyFormatter amount={sampleProduct.price || 0}></CurrencyFormatter>
           </div>
           <div className={styles.productImageContainer}>
-            <img alt={sampleProduct.alt} src={toOptimizedImage(sampleProduct.image)}></img>
+            <img alt={sampleProduct.alt || 'Product'} src={toOptimizedImage(sampleProduct.image || '/products/pdp1.jpeg')}></img>
           </div>
         </div>
 
-        <div className={styles.sectionContainer}>
-          <SwatchList
-            swatchList={sampleProduct.colorOptions}
-            activeSwatch={activeSwatch}
-            setActiveSwatch={setActiveSwatch}
-          />
-        </div>
+        {sampleProduct.colorOptions && (
+          <div className={styles.sectionContainer}>
+            <SwatchList
+              swatchList={sampleProduct.colorOptions}
+              activeSwatch={activeSwatch}
+              setActiveSwatch={setActiveSwatch}
+            />
+          </div>
+        )}
 
-        <div className={styles.sectionContainer}>
-          <SizeList
-            sizeList={sampleProduct.sizeOptions}
-            activeSize={activeSize}
-            setActiveSize={setActiveSize}
-          />
-        </div>
+        {sampleProduct.sizeOptions && (
+          <div className={styles.sectionContainer}>
+            <SizeList
+              sizeList={sampleProduct.sizeOptions}
+              activeSize={activeSize}
+              setActiveSize={setActiveSize}
+            />
+          </div>
+        )}
 
         <Button onClick={() => handleAddToBag()} fullWidth level={'primary'}>
           {buttonTitle}
