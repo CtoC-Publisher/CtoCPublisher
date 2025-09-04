@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import * as styles from './ProductCardGrid.module.css';
 
 import Drawer from '../Drawer';
 import ProductCard from '../ProductCard';
 import QuickView from '../QuickView';
-import Slider from '../Slider';
+
+const Slider = lazy(() => import('../Slider'));
 
 const ProductCardGrid = (props) => {
   const [showQuickView, setShowQuickView] = useState(false);
@@ -45,7 +46,9 @@ const ProductCardGrid = (props) => {
 
       {showSlider === true && (
         <div className={styles.mobileSlider}>
-          <Slider spacing={spacing}>{data && renderCards()}</Slider>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Slider spacing={spacing}>{data && renderCards()}</Slider>
+          </Suspense>
         </div>
       )}
 

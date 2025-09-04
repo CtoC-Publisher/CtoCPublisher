@@ -1,14 +1,15 @@
-// https://stackoverflow.com/questions/63124432/how-do-i-configure-mini-css-extract-plugin-in-gatsby
-exports.onCreateWebpackConfig = (helper) => {
-  const { stage, actions, getConfig } = helper;
-  if (stage === 'develop' || stage === 'build-javascript') {
-    const config = getConfig();
-    const miniCssExtractPlugin = config.plugins.find(
-      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
-    );
-    if (miniCssExtractPlugin) {
-      miniCssExtractPlugin.options.ignoreOrder = true;
-    }
-    actions.replaceWebpackConfig(config);
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/node-apis/
+ */
+
+// Temporarily exclude problematic pages during build
+exports.onCreatePage = ({ page, actions }) => {
+  const { deletePage } = actions;
+  
+  // Skip account pages that have SSR issues with react-slick
+  if (page.path.includes('/account/')) {
+    deletePage(page);
   }
 };
