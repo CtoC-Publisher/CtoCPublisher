@@ -39,7 +39,8 @@ const CartPage = (props) => {
             </div>
           </div>
           <div className={styles.summaryContainer}>
-            <h3>Selected Books - Buy on Amazon</h3>
+            <h3>Ready to Purchase? Buy Directly on Amazon</h3>
+            <p className={styles.amazonMessage}>All books redirect to Amazon for secure checkout with our affiliate link ctocpublisher-20</p>
             <div className={styles.cartContainer}>
               <div className={styles.cartItemsContainer}>
                 <CartItem {...sampleCartItem} />

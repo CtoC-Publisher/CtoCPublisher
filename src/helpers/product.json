@@ -31,7 +31,7 @@
         "tags": ["romance", "contemporary", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B01LZPQZJY",
         "name": "The Seven Husbands of Evelyn Hugo",
         "vendor": "Taylor Jenkins Reid",
         "price": 16.99,
@@ -41,7 +41,7 @@
         "tags": ["fiction", "historical", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B075F7N5ZQ",
         "name": "Where the Crawdads Sing",
         "vendor": "Delia Owens",
         "price": 15.99,
@@ -51,7 +51,7 @@
         "tags": ["fiction", "mystery", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B084DWM8Q5",
         "name": "The Thursday Murder Club",
         "vendor": "Richard Osman",
         "price": 15.99,
@@ -61,7 +61,7 @@
         "tags": ["mystery", "cozy-mystery", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B086WP7X7Q",
         "name": "The Midnight Library",
         "vendor": "Matt Haig",
         "price": 14.99,
@@ -71,7 +71,7 @@
         "tags": ["fiction", "philosophical", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B08FHBV4ZX",
         "name": "Project Hail Mary",
         "vendor": "Andy Weir",
         "price": 17.99,
@@ -81,7 +81,7 @@
         "tags": ["sci-fi", "space", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B07BRBZW4R",
         "name": "The Silent Patient",
         "vendor": "Alex Michaelides",
         "price": 15.99,
@@ -91,7 +91,7 @@
         "tags": ["thriller", "psychological", "bestseller"]
     },
     {
-        "productCode": "B08FF8HJRZ",
+        "productCode": "B072BLVM83",
         "name": "Educated",
         "vendor": "Tara Westover",
         "price": 17.99,
@@ -137,7 +137,7 @@
         "price": 18.99,
         "alt": "Sapiens book cover",
         "image": "/products/sapiens.jpg",
-        "amazonUrl": "https://www.amazon.com/dp/B00ICN066A?tag=ctocpublisher-20"
+        "amazonUrl": "https://www.amazon.com/dp/B00ICN066A?tag=ctocpublisher-20",
         "tags": ["history", "non-fiction", "bestseller", "science"]
     }
-  ]
+]

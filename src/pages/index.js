@@ -12,6 +12,8 @@ import Quote from '../components/Quote';
 import Title from '../components/Title';
 import BestsellersShowcase from '../components/BestsellersShowcase';
 import AnimatedBook from '../components/AnimatedBook';
+import Top10Bestsellers from '../components/Top10Bestsellers';
+import CategoryFlood from '../components/CategoryFlood';
 
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 import productData from '../helpers/product.json';
@@ -60,8 +62,11 @@ const IndexPage = () => {
         </Container>
       </div>
 
-      {/* Amazon Bestsellers Showcase */}
-      <BestsellersShowcase books={productData} />
+      {/* Top 10 Amazon Bestsellers */}
+      <Top10Bestsellers books={productData} />
+
+      {/* Category Flooding - 100+ Books */}
+      <CategoryFlood books={productData} />
 
       {/* New Arrivals */}
       <div className={styles.newArrivalsContainer}>

@@ -167,7 +167,7 @@ const Footer = (prop) => {
                 )}
               </div>
               <span>
-                2022 © CtoC Books, MADE WITH LUV.
+                2025 © CtoC Books. Independent Bookshop.
               </span>
             </div>
           </div>
