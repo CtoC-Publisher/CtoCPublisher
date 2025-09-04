@@ -8,8 +8,8 @@
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
   
-  // Skip account pages that have SSR issues with react-slick
-  if (page.path.includes('/account/')) {
+  // Skip pages that have SSR issues with react-slick
+  if (page.path.includes('/account/') || page.path.includes('/shopV2/')) {
     deletePage(page);
   }
 };
