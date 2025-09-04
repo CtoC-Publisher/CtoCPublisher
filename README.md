@@ -51,6 +51,11 @@ The site features popular Amazon bestsellers with direct purchase links:
 - **Button Text**: "Buy on Amazon" instead of "Add to Cart"
 - **Revenue**: Ready for Amazon affiliate program integration
 
+#### Next Steps (Optional):
+1. **Add Amazon Affiliate ID** to URLs for commission
+2. **Update book covers** with actual Amazon images
+3. **Add more books** by editing `product.json`
+
 ### Navigation & Categories 🧭
 
 Update `/src/config.json` to modify:
@@ -74,7 +79,7 @@ Customize `/src/pages/index.js` for:
 ## Technology Stack 🛠️
 
 - [Gatsby](https://www.gatsbyjs.com/) - React-based static site generator
-- [CSS Modules](https://github.com/css-modules/css-modules) - Scoped styling
+- [CSS Modules](https://github.com/css-modules/css-modules) - Scoped styling with smooth scrolling
 - [React Helmet](https://github.com/nfl/react-helmet) - Document head management
 - **Amazon Integration** - Direct product linking and affiliate-ready
 
