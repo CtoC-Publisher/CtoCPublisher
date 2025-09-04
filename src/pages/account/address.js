@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './address.module.css';
 
@@ -36,9 +36,11 @@ const AddressPage = (props) => {
   const [showForm, setShowForm] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
 
-  if (isAuth() === false) {
-    navigate('/login');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isAuth() === false) {
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <Layout>

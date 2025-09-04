@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as styles from './orders.module.css';
 
 import AccountLayout from '../../components/AccountLayout/AccountLayout';
@@ -9,9 +9,11 @@ import { isAuth } from '../../helpers/general';
 import { navigate } from 'gatsby';
 
 const OrderPage = (props) => {
-  if (isAuth() === false) {
-    navigate('/login');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isAuth() === false) {
+      navigate('/login');
+    }
+  }, []);
 
   const sampleOrder1 = {
     id: '2',

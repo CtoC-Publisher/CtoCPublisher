@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './viewed.module.css';
 
@@ -13,9 +13,11 @@ import { generateMockProductData } from '../../helpers/mock';
 const RecentlyViewedPage = (props) => {
   const recentlyViewed = generateMockProductData(3, 'shirt');
 
-  if (isAuth() === false) {
-    navigate('/login');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isAuth() === false) {
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <Layout>

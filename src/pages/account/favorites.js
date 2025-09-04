@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './favorites.module.css';
 
@@ -33,11 +33,13 @@ const FavoritesPage = (props) => {
     alt: 'favorite 3',
   };
 
-  if (isAuth() === false) {
-    navigate('/login');
-  }
-
   const [showDelete, setShowDelete] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isAuth() === false) {
+      navigate('/login');
+    }
+  }, []);
 
   return (
     <Layout>

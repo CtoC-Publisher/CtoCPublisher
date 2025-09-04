@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import * as styles from './settings.module.css';
 
@@ -15,9 +15,11 @@ import {
 } from '../../helpers/general';
 
 const SettingsPage = (props) => {
-  if (isAuth() === false) {
-    navigate('/login');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && isAuth() === false) {
+      navigate('/login');
+    }
+  }, []);
 
   const initialState = {
     firstName: '',
