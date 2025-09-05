@@ -22,11 +22,26 @@ const ShopPage = (props) => {
     { key: 'mystery', label: 'Mystery & Thriller', count: allBooks.filter(book => book.tags?.includes('mystery') || book.tags?.includes('thriller')).length }
   ];
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQuery = urlParams.get('search');
+  const pageTitle = searchQuery ? `Search results for "${searchQuery}"` : 'Browse Books';
+
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
+    const searchParam = urlParams.get('search');
+    
     if (categoryParam) {
       setActiveCategory(categoryParam);
+    }
+    
+    if (searchParam) {
+      const searchResults = allBooks.filter(book => 
+        book.name.toLowerCase().includes(searchParam.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchParam.toLowerCase())
+      );
+      setFilteredData(searchResults);
+      setActiveCategory('search');
     }
   }, []);
 
@@ -68,7 +83,7 @@ const ShopPage = (props) => {
         </Container>
         
         <Container size={'large'} spacing={'min'}>
-          <Title name={'Browse Books'} subtitle={`${filteredData.length} books available`} />
+          <Title name={pageTitle} subtitle={`${filteredData.length} books available`} />
           
           {/* Category Filter Buttons */}
           <div className={styles.categoryFilters}>
