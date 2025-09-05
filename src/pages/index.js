@@ -36,14 +36,13 @@ const IndexPage = () => {
 
       {/* Message Container */}
       <div className={styles.messageContainer}>
-        <p>
-          Welcome to <span className={styles.gold}>CtoC Books</span> - your Amazon affiliate bookshop for{' '}
-          <span className={styles.gold}>curated bestsellers.</span>
-        </p>
-        <p>
-          Click any book to buy directly on Amazon with{' '}
-          <span className={styles.gold}>fast shipping</span>
-        </p>
+        <Container>
+          <h2 className={styles.welcomeTitle}>
+            WELCOME TO CTOC BOOKS - YOUR AMAZON AFFILIATE BOOKSHOP FOR CURATED BESTSELLERS.
+            <br />
+            CLICK ANY BOOK TO BUY DIRECTLY ON AMAZON WITH FAST SHIPPING
+          </h2>
+        </Container>
       </div>
 
       {/* Bestsellers Section */}
