@@ -1,8 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: `CtoC Publisher - Independent Publishing House`,
+    title: `CtoC Books - Independent Bookshop`,
+    description: `Amazon affiliate bookshop specializing in curated bestsellers, fiction, and non-fiction books.`,
     siteUrl: `https://ctoc-publisher.github.io/CtoCPublisher`,
   },
   pathPrefix: "/CtoCPublisher",
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`autoprefixer`)],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static`,
+      },
+    },
+    `gatsby-adapter-netlify`,
+  ],
 };
