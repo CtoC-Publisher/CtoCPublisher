@@ -1,31 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import * as styles from './shop.module.css';
 
-import Banner from '../components/Banner';
 import Breadcrumbs from '../components/Breadcrumbs';
-import CardController from '../components/CardController';
 import Container from '../components/Container';
-import Chip from '../components/Chip';
-import Icon from '../components/Icons/Icon';
 import Layout from '../components/Layout';
-import LayoutOption from '../components/LayoutOption';
 import ProductCardGrid from '../components/ProductCardGrid';
-import { generateMockProductData } from '../helpers/mock';
-import Button from '../components/Button';
-import Config from '../config.json';
+import Title from '../components/Title';
+import { generateMockBookData } from '../helpers/mock';
 
 const ShopPage = (props) => {
-  const [showFilter, setShowFilter] = useState(false);
-  const data = generateMockProductData(6, 'woman');
+  const [filteredData, setFilteredData] = useState([]);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const allBooks = generateMockBookData(14);
+
+  const categories = [
+    { key: 'all', label: 'All Books', count: allBooks.length },
+    { key: 'bestseller', label: 'Bestsellers', count: allBooks.filter(book => book.tags?.includes('bestseller')).length },
+    { key: 'fiction', label: 'Fiction', count: allBooks.filter(book => book.tags?.includes('fiction') || book.tags?.includes('romance') || book.tags?.includes('fantasy')).length },
+    { key: 'non-fiction', label: 'Non-Fiction', count: allBooks.filter(book => book.tags?.includes('memoir') || book.tags?.includes('business') || book.tags?.includes('self-help') || book.tags?.includes('history')).length },
+    { key: 'romance', label: 'Romance', count: allBooks.filter(book => book.tags?.includes('romance')).length },
+    { key: 'mystery', label: 'Mystery & Thriller', count: allBooks.filter(book => book.tags?.includes('mystery') || book.tags?.includes('thriller')).length }
+  ];
 
   useEffect(() => {
-    window.addEventListener('keydown', escapeHandler);
-    return () => window.removeEventListener('keydown', escapeHandler);
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      setActiveCategory(categoryParam);
+    }
   }, []);
 
-  const escapeHandler = (e) => {
-    if (e?.keyCode === undefined) return;
-    if (e.keyCode === 27) setShowFilter(false);
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredData(allBooks);
+    } else {
+      const filtered = allBooks.filter(book => {
+        if (activeCategory === 'fiction') {
+          return book.tags?.some(tag => ['fiction', 'romance', 'fantasy', 'sci-fi'].includes(tag));
+        }
+        if (activeCategory === 'non-fiction') {
+          return book.tags?.some(tag => ['memoir', 'business', 'self-help', 'history', 'biography'].includes(tag));
+        }
+        return book.tags?.includes(activeCategory);
+      });
+      setFilteredData(filtered);
+    }
+  }, [activeCategory, allBooks]);
+
+  const handleCategoryClick = (categoryKey) => {
+    setActiveCategory(categoryKey);
+    const newUrl = categoryKey === 'all' ? '/shop' : `/shop?category=${categoryKey}`;
+    window.history.pushState({}, '', newUrl);
   };
 
   return (
@@ -36,62 +61,33 @@ const ShopPage = (props) => {
             <Breadcrumbs
               crumbs={[
                 { link: '/', label: 'Home' },
-                { link: '/', label: 'Woman' },
-                { label: 'Sweaters' },
+                { label: 'Shop' },
               ]}
             />
           </div>
         </Container>
-        <Banner
-          maxWidth={'650px'}
-          name={`Woman's Sweaters`}
-          subtitle={
-            'Look to our women’s sweaters for modern takes on one-and-done dressing. From midis in bold prints to dramatic floor-sweeping styles and easy all-in-ones, our edit covers every mood.'
-          }
-        />
+        
         <Container size={'large'} spacing={'min'}>
-          <div className={styles.metaContainer}>
-            <span className={styles.itemCount}>476 items</span>
-            <div className={styles.controllerContainer}>
-              <div
-                className={styles.iconContainer}
-                role={'presentation'}
-                onClick={() => setShowFilter(!showFilter)}
+          <Title name={'Browse Books'} subtitle={`${filteredData.length} books available`} />
+          
+          {/* Category Filter Buttons */}
+          <div className={styles.categoryFilters}>
+            {categories.map((category) => (
+              <button
+                key={category.key}
+                className={`${styles.categoryButton} ${activeCategory === category.key ? styles.active : ''}`}
+                onClick={() => handleCategoryClick(category.key)}
               >
-                <Icon symbol={'filter'} />
-                <span>Filters</span>
-              </div>
-              <div
-                className={`${styles.iconContainer} ${styles.sortContainer}`}
-              >
-                <span>Sort by</span>
-                <Icon symbol={'caret'} />
-              </div>
-            </div>
+                {category.label} ({category.count})
+              </button>
+            ))}
           </div>
-          <CardController
-            closeFilter={() => setShowFilter(false)}
-            visible={showFilter}
-            filters={Config.filters}
-          />
-          <div className={styles.chipsContainer}>
-            <Chip name={'XS'} />
-            <Chip name={'S'} />
-          </div>
+          
           <div className={styles.productContainer}>
-            <span className={styles.mobileItemCount}>476 items</span>
-            <ProductCardGrid data={data}></ProductCardGrid>
-          </div>
-          <div className={styles.loadMoreContainer}>
-            <span>6 of 456</span>
-            <Button fullWidth level={'secondary'}>
-              LOAD MORE
-            </Button>
+            <ProductCardGrid data={filteredData}></ProductCardGrid>
           </div>
         </Container>
       </div>
-
-      <LayoutOption />
     </Layout>
   );
 };

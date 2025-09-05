@@ -1,30 +1,21 @@
 import * as React from 'react';
 
-import AttributeGrid from '../components/AttributeGrid';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 import BlogPreviewGrid from '../components/BlogPreviewGrid';
-import Highlight from '../components/Highlight';
 import Layout from '../components/Layout/Layout';
-import ProductCollectionGrid from '../components/ProductCollectionGrid';
 import ProductCardGrid from '../components/ProductCardGrid';
-import Quote from '../components/Quote';
 import Title from '../components/Title';
-import BestsellersShowcase from '../components/BestsellersShowcase';
-import AnimatedBook from '../components/AnimatedBook';
-import Top10Bestsellers from '../components/Top10Bestsellers';
-import CategoryFlood from '../components/CategoryFlood';
-import AmazonHero from '../components/AmazonHero';
 
-import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
-import productData from '../helpers/product.json';
+import { generateMockBlogData, generateMockBookData } from '../helpers/mock';
 
 import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
-import { toOptimizedImage } from '../helpers/general';
 
 const IndexPage = () => {
-  const newArrivals = generateMockProductData(3, 'fiction');
+  const bestsellers = generateMockBookData(4, 'bestseller');
+  const fiction = generateMockBookData(4, 'fiction');
+  const nonFiction = generateMockBookData(4, 'non-fiction');
   const blogData = generateMockBlogData(3);
 
   const goToShop = () => {
@@ -37,125 +28,74 @@ const IndexPage = () => {
       <Hero
         maxWidth={'500px'}
         image={'/banner1.png'}
-        title={'Amazon Bestsellers & More'}
-        subtitle={'Shop Top-Rated Books with Direct Amazon Links'}
-        ctaText={'shop amazon books'}
+        title={'CtoC Books - Independent Bookshop'}
+        subtitle={'Curated bestsellers with Amazon direct links'}
+        ctaText={'Browse Books'}
         ctaAction={goToShop}
       />
-
-      {/* Amazon Integration Banner */}
-      <AmazonHero />
 
       {/* Message Container */}
       <div className={styles.messageContainer}>
         <p>
-          Welcome to <span className={styles.gold}>CtoC Books</span> - your independent bookshop for{' '}
-          <span className={styles.gold}>curated literature.</span>
+          Welcome to <span className={styles.gold}>CtoC Books</span> - your Amazon affiliate bookshop for{' '}
+          <span className={styles.gold}>curated bestsellers.</span>
         </p>
         <p>
-          Featuring bestsellers, classics, and{' '}
-          <span className={styles.gold}>hidden gems</span>
+          Click any book to buy directly on Amazon with{' '}
+          <span className={styles.gold}>fast shipping</span>
         </p>
       </div>
 
-      {/* Collection Container */}
-      <div className={styles.collectionContainer}>
-        <Container size={'large'}>
-          <Title name={'Featured Collections'} />
-          <ProductCollectionGrid />
-        </Container>
-      </div>
-
-      {/* Top 10 Amazon Bestsellers */}
-      <Top10Bestsellers books={productData} />
-
-      {/* Category Flooding - 100+ Books */}
-      <CategoryFlood books={productData} />
-
-      {/* New Arrivals */}
-      <div className={styles.newArrivalsContainer}>
+      {/* Bestsellers Section */}
+      <div className={styles.categorySection}>
         <Container>
-          <Title name={'New Releases'} link={'/shop'} textLink={'view all'} />
+          <Title name={'Amazon Bestsellers'} link={'/shop?category=bestseller'} textLink={'view all bestsellers'} />
           <ProductCardGrid
             spacing={true}
             showSlider
             height={480}
-            columns={3}
-            data={newArrivals}
+            columns={4}
+            data={bestsellers}
           />
         </Container>
       </div>
 
-      {/* Highlight  */}
-      <div className={styles.highlightContainer}>
-        <Container size={'large'} fullMobile>
-          <Highlight
-            image={'/highlight.png'}
-            altImage={'highlight image'}
-            miniImage={'/highlightmin.png'}
-            miniImageAlt={'mini highlight image'}
-            title={'Staff Picks'}
-            description={`Handpicked by our knowledgeable staff, these books represent the finest in contemporary and classic literature`}
-            textLink={'explore picks'}
-            link={'/shop'}
+      {/* Fiction Section */}
+      <div className={styles.categorySection}>
+        <Container>
+          <Title name={'Fiction Favorites'} link={'/shop?category=fiction'} textLink={'browse fiction'} />
+          <ProductCardGrid
+            spacing={true}
+            showSlider
+            height={480}
+            columns={4}
+            data={fiction}
           />
         </Container>
       </div>
 
-      {/* Promotion */}
-      <div className={styles.promotionContainer}>
-        <Hero image={toOptimizedImage('/banner2.png')} title={`Book Club Special \n 20% Off Selected Titles`} />
-        <div className={styles.linkContainers}>
-          <Link to={'/shop'}>FICTION</Link>
-          <Link to={'/shop'}>NON-FICTION</Link>
-        </div>
+      {/* Non-Fiction Section */}
+      <div className={styles.categorySection}>
+        <Container>
+          <Title name={'Non-Fiction Essentials'} link={'/shop?category=non-fiction'} textLink={'explore non-fiction'} />
+          <ProductCardGrid
+            spacing={true}
+            showSlider
+            height={480}
+            columns={4}
+            data={nonFiction}
+          />
+        </Container>
       </div>
-
-      {/* Quote */}
-      <Quote
-        bgColor={'var(--standard-light-grey)'}
-        title={'about CtoC Books'}
-        quote={
-          '“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”'
-        }
-      />
 
       {/* Blog Grid */}
       <div className={styles.blogsContainer}>
         <Container size={'large'}>
-          <Title name={'Book Reviews'} subtitle={'Insights and recommendations from our team'} />
+          <Title name={'Book Reviews & Recommendations'} subtitle={'Expert insights on the latest releases'} />
           <BlogPreviewGrid data={blogData} />
         </Container>
       </div>
 
-      {/* Promotion */}
-      <div className={styles.sustainableContainer}>
-        <Hero
-          image={toOptimizedImage('/banner3.png')}
-          title={'We are Sustainable'}
-          subtitle={
-            'From caring for our land to supporting our people, discover the steps we’re taking to do more for the world around us.'
-          }
-          ctaText={'read more'}
-          maxWidth={'660px'}
-          ctaStyle={styles.ctaCustomButton}
-        />
-      </div>
-
-      {/* Social Media */}
-      <div className={styles.socialContainer}>
-        <Title
-          name={'Reading Community'}
-          subtitle={'Tag @ctocbooks to share your latest read.'}
-        />
-        <div className={styles.socialContentGrid}>
-          <img src={toOptimizedImage(`/social/socialMedia1.png`)} alt={'social media 1'} />
-          <img src={toOptimizedImage(`/social/socialMedia2.png`)} alt={'social media 2'} />
-          <img src={toOptimizedImage(`/social/socialMedia3.png`)} alt={'social media 3'} />
-          <img src={toOptimizedImage(`/social/socialMedia4.png`)} alt={'social media 4'} />
-        </div>
-      </div>
-      <AttributeGrid />
     </Layout>
   );
 };

@@ -22,6 +22,14 @@
     font-size: 14px;
     line-height: 17px;
     color: var(--standard-black);
+    display: block;
+}
+
+.author {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--grey-placeholder);
+    display: block;
 }
 
 .prices {
@@ -55,89 +63,6 @@
     margin-right: 16px;
 }
 
-.bagContainer {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-
-    width: 120px;
-    height: 40px;
-    background-color: #FF9900;
-    color: white;
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.buyText {
-    margin-left: 5px;
-    font-size: 11px;
-}
-
-.imageContainer:hover .bagContainer {
-    opacity: 1;
-    visibility: visible;
-}
-
-.heartContainer {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.root:hover .heartContainer {
-    opacity: 1;
-    visibility: visible;
-}
-
-.heartFillContainer {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: var(--standard-gold);
-
-    transition: opacity 0.3s ease-in-out;
-}
-
-.heartFillContainer svg{
-    width: 20px;
-    height: 20px;
-}
-
-.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-.hide {
-    visibility: hidden;
-    opacity: 0;
-}
-
-@media (max-width: 800px) {
-    .bagContainer {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .heartContainer {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
 @media (max-width: 600px) {
     .imageContainer img{
         height: 300px !important;
@@ -149,6 +74,11 @@
         line-height: 16px;
     }
 
+    .author {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
     .prices span {
         font-size: 13px;
         line-height: 16px;
@@ -158,20 +88,5 @@
 @media (max-width: 400px) {
     .imageContainer img{
         height: 220px !important;
-    }
-
-    .bagContainer {
-        width: 40px;
-        height: 40px;
-    }
-
-    .bagContainer svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .heartContainer {
-        top: 32px;
-        right: 16px;
     }
 }

@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import React from 'react';
 import * as styles from './ProductCard.module.css';
 
-import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
-import { toOptimizedImage } from '../../helpers/general';
-import { redirectToAmazon, getAmazonUrlFromProduct } from '../../helpers/amazon';
 
 const ProductCard = (props) => {
-  const [isWishlist, setIsWishlist] = useState(false);
   const {
     image,
     imageAlt,
@@ -16,81 +11,34 @@ const ProductCard = (props) => {
     price,
     originalPrice,
     meta,
-    showQuickView,
-    height = 580,
-    amazonUrl,
+    author,
+    amazonUrl
   } = props;
-
-  const handleRouteToProduct = () => {
-    const amazonLink = amazonUrl || getAmazonUrlFromProduct(props);
-    if (amazonLink) {
-      redirectToAmazon(amazonLink);
-    } else {
-      navigate('/product/sample');
-    }
-  };
-
-  const handleQuickView = (e) => {
-    e.stopPropagation();
-    const amazonLink = amazonUrl || getAmazonUrlFromProduct(props);
-    if (amazonLink) {
-      redirectToAmazon(amazonLink);
-    } else {
-      showQuickView();
-    }
-  };
-
-  const handleFavorite = (e) => {
-    e.stopPropagation();
-    setIsWishlist(!isWishlist);
-  };
 
   return (
     <div className={styles.root}>
-      <div
-        className={styles.imageContainer}
-        onClick={() => handleRouteToProduct()}
-        role={'presentation'}
-      >
-        <img style={{ height: `${height}px` }} src={toOptimizedImage(image)} alt={imageAlt}></img>
-        <div
-          className={styles.bagContainer}
-          role={'presentation'}
-          onClick={(e) => handleQuickView(e)}
-        >
-          <Icon symbol={'bagPlus'} />
-          <span className={styles.buyText}>Buy on Amazon</span>
+      <a href={amazonUrl} target="_blank" rel="noopener noreferrer">
+        <div className={styles.imageContainer}>
+          <img src={image} alt={imageAlt}></img>
         </div>
-        <div
-          className={styles.heartContainer}
-          role={'presentation'}
-          onClick={(e) => handleFavorite(e)}
-        >
-          <Icon symbol={'heart'} />
-          <div
-            className={`${styles.heartFillContainer} ${
-              isWishlist === true ? styles.show : styles.hide
-            }`}
-          >
-            <Icon symbol={'heartFill'}></Icon>
-          </div>
-        </div>
-      </div>
+      </a>
       <div className={styles.detailsContainer}>
-        <span className={styles.productName}>{name}</span>
-        <div className={styles.prices}>
-          <span
-            className={`${originalPrice !== undefined ? styles.salePrice : ''}`}
-          >
-            <CurrencyFormatter amount={price}></CurrencyFormatter>
-          </span>
-          {originalPrice && (
-            <span className={styles.originalPrice}>
-              <CurrencyFormatter amount={originalPrice}></CurrencyFormatter>
+        <a href={amazonUrl} target="_blank" rel="noopener noreferrer">
+          <span className={styles.productName}>{name}</span>
+          <span className={styles.author}>{author}</span>
+          <div className={styles.prices}>
+            <span
+              className={`${originalPrice !== undefined ? styles.salePrice : ''}`}>
+              <CurrencyFormatter amount={price}></CurrencyFormatter>
             </span>
-          )}
-        </div>
-        <span className={styles.meta}>{meta}</span>
+            {originalPrice && (
+              <span className={styles.originalPrice}>
+                <CurrencyFormatter amount={originalPrice}></CurrencyFormatter>
+              </span>
+            )}
+          </div>
+          <span className={styles.meta}>{meta}</span>
+        </a>
       </div>
     </div>
   );

@@ -2,112 +2,43 @@
     margin-top: 16px;
 }
 
-.bannerContainer h2 {
-    margin-bottom: 24px;
-}
-
-.subtitleStyle {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    margin-top: 32px;
-}
-
-.metaContainer {
+.categoryFilters {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.controllerContainer {
-    display: flex;
-    gap: 48px;
-}
-
-.iconContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
+    margin: 32px 0 48px 0;
+    justify-content: center;
+}
+
+.categoryButton {
+    padding: 12px 24px;
+    border: 2px solid var(--grey-crumb);
+    background-color: white;
+    color: var(--grey-crumb);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-.iconContainer span {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+.categoryButton:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
-.sortContainer svg {
-    width: 8px;
-    height: 8px;
-}
-
-.itemCount {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.chipsContainer {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
+.categoryButton.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
 }
 
 .productContainer {
     margin-top: 32px;
 }
 
-.loadMoreContainer {
-    margin-top: 80px;
-    width: 160px;
-    margin: 96px auto 0px auto;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.loadMoreContainer span {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.mobileItemCount {
-    display: none;
-}
-
 @media (max-width: 800px) {
-    .itemCount {
-        display: none;
-    }
-
-    .controllerContainer {
-        gap: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .mobileItemCount {
-        display: block;
-        text-align: center;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 15px;
-        color: var(--grey-placeholder);
-        margin-bottom: 16px;
-    }
-
-    .metaContainer {
-        margin: 0px 8px;
-    }
-
     .productContainer {
         margin-left: 8px;
         margin-right: 8px;
@@ -119,5 +50,17 @@
 
     .breadcrumbContainer > div {
         display: none;
+    }
+    
+    .categoryFilters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+    
+    .categoryButton {
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 10px 20px;
     }
 }

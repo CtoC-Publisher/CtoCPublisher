@@ -1,16 +1,17 @@
 import productJson from './product.json';
 import blogJson from './blog.json';
-/**
 
-*/
-function generateMockProductData(count, tag) {
-  const products = productJson;
-  const filtered = products.filter((item) => item.tags.includes(tag));
-  return filtered.slice(0, count);
+function generateMockBookData(count, tag) {
+  const books = productJson;
+  if (tag) {
+    const filtered = books.filter((item) => item.tags.includes(tag));
+    return filtered.slice(0, count);
+  }
+  return books.slice(0, count);
 }
 
 function generateMockBlogData(count) {
   return blogJson.slice(0, count);
 }
 
-export { generateMockProductData, generateMockBlogData };
+export { generateMockBookData, generateMockBlogData };
