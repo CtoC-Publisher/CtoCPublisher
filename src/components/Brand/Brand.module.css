@@ -4,9 +4,16 @@
     cursor: pointer;
 }
 
+.brandText {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--standard-black);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
 @media (max-width: 800px) {
-    .root svg {
-        width: 90px;
-        height: 16.67px;
+    .brandText {
+        font-size: 20px;
     }
 }

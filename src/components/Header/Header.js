@@ -59,27 +59,19 @@ const Header = (prop) => {
                   <div className={styles.dropdownContent}>
                     <div className={styles.categorySection}>
                       <h4>Fiction</h4>
-                      {bookCategories.fiction.map((item, index) => (
-                        <Link key={index} to={item.link} className={styles.dropdownLink}>
-                          {item.name}
-                        </Link>
-                      ))}
+                      <Link to='/shop?category=fiction' className={styles.dropdownLink}>All Fiction</Link>
+                      <Link to='/shop?category=romance' className={styles.dropdownLink}>Romance</Link>
+                      <Link to='/shop?category=mystery' className={styles.dropdownLink}>Mystery</Link>
                     </div>
                     <div className={styles.categorySection}>
                       <h4>Non-Fiction</h4>
-                      {bookCategories.nonfiction.map((item, index) => (
-                        <Link key={index} to={item.link} className={styles.dropdownLink}>
-                          {item.name}
-                        </Link>
-                      ))}
+                      <Link to='/shop?category=non-fiction' className={styles.dropdownLink}>All Non-Fiction</Link>
+                      <Link to='/shop?category=business' className={styles.dropdownLink}>Business</Link>
+                      <Link to='/shop?category=self-help' className={styles.dropdownLink}>Self-Help</Link>
                     </div>
                     <div className={styles.categorySection}>
                       <h4>Bestsellers</h4>
-                      {bookCategories.bestsellers.map((item, index) => (
-                        <Link key={index} to={item.link} className={styles.dropdownLink}>
-                          {item.name}
-                        </Link>
-                      ))}
+                      <Link to='/shop?category=bestseller' className={styles.dropdownLink}>All Bestsellers</Link>
                     </div>
                   </div>
                 )}
