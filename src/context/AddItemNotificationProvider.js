@@ -1,42 +1,26 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-const defaultState = {
-  open: false,
-};
-
-export const NotificationContext = createContext(defaultState);
+const NotificationContext = createContext();
 
 export const NotificationProvider = ({ children }) => {
-  const [state, setState] = useState(defaultState);
+  const [notification, setNotification] = useState(null);
 
-  const showNotification = () => {
-    setState({ ...state, open: true });
+  const showNotification = (message) => {
+    setNotification(message);
+    setTimeout(() => setNotification(null), 3000);
   };
-
-  const closeNotification = () => {
-    setState({ ...state, open: false });
-  };
-
-  useEffect(() => {
-    if (state?.open === true) {
-      setTimeout(() => {
-        closeNotification();
-      }, 2000);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state]);
 
   return (
-    <NotificationContext.Provider
-      value={{
-        state,
-        setState,
-        showNotification,
-      }}
-    >
+    <NotificationContext.Provider value={{ notification, showNotification }}>
       {children}
     </NotificationContext.Provider>
   );
 };
 
-export default NotificationContext;
+export const useNotification = () => {
+  const context = useContext(NotificationContext);
+  if (!context) {
+    throw new Error('useNotification must be used within NotificationProvider');
+  }
+  return context;
+};

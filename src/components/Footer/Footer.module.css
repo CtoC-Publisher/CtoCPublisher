@@ -1,6 +1,17 @@
 .root {
-    background-color: var(--bg-dark);
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     padding-bottom: 50px;
+    position: relative;
+}
+
+.root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e67e22, transparent);
 }
 
 .content {
@@ -8,35 +19,63 @@
     padding-bottom: 40px;
 }
 
-.contentTop {
+.footerGrid {
     display: grid;
-    grid-template-columns: 0.25fr 0.25fr 0.5fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
 }
 
-.newsLetter {
+.footerSection {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
 }
 
-.newsLetterContent {
-    max-width: 360px;
+.sectionTitle {
+    color: var(--standard-white);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
 }
 
-.newsLetterContent p {
-    font-size: 14px;
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: #e67e22;
+    border-radius: 2px;
 }
 
 .linkList {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.link{
-    color: var(--standard-white);
-    margin-bottom: 12px;
-    display: inline-block;
+.link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    position: relative;
+}
+
+.link:hover {
+    color: #e67e22;
+    transform: translateX(8px);
 }
 
 .linkTitle {
@@ -46,18 +85,7 @@
     color: var(--standard-white);
 }
 
-.link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--standard-white);
-    transition: width 0.3s ease-in-out;
-}
 
-.link:hover::after {
-    width: 100%;
-}
 
 .promoMessage {
     color: var(--standard-white);
@@ -70,26 +98,32 @@
 }
 
 .socialContainer {
-    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .socialIconContainer {
-    color: var(--standard-white);
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
-
-    margin-right: 28px;
-    padding: 10px;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
-.socialIconContainer:first-child {
-    margin-right: 0px;
+.socialIconContainer:hover {
+    color: #e67e22;
+    border-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
 }
+
+
 
 .socialIconContainer svg {
     width: 16px;
@@ -97,7 +131,9 @@
 }
 
 .contentBottomContainer {
-    border-top: 1px solid var(--standard-dark-grey);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
 }
 
 .contentBottom {
@@ -152,12 +188,25 @@
     flex-direction: column;
 }
 
-.copyrightContainer span{
-    color: var(--standard-white);
+.copyrightContainer span {
+    color: rgba(255, 255, 255, 0.7);
     display: block;
     margin-top: 32px;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.newsletterText {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.newsletterForm {
+    margin-bottom: 1.5rem;
 }
 
 .copyrightContainer a {
@@ -186,24 +235,21 @@
     }
 }
 
-@media (max-width: 800px) {
-    .contentTop {
-        display: grid;
+@media (max-width: 480px) {
+    .footerGrid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-    
-    .newsLetter {
-        margin-top: 24px;
-        display: flex;
-        justify-content: start;
-    }
+}
 
-    .newsLetterContent {
-        max-width: 100%;
+@media (max-width: 800px) {
+    .footerGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .socialContainer {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .contentBottom {
