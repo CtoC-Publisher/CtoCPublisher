@@ -5,7 +5,6 @@ import Layout from '../components/Layout/Layout';
 import ThemeLink from '../components/ThemeLink';
 import Container from '../components/Container';
 import Button from '../components/Button';
-import { toOptimizedImage } from '../helpers/general';
 
 const HowToUsePage = (props) => {
   let builtRef = useRef();
@@ -24,149 +23,69 @@ const HowToUsePage = (props) => {
     <Layout>
       <div className={styles.root}>
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(builtRef)} to={'#builtby'}>
-            Who built this theme
+          <ThemeLink onClick={() => handleScroll(builtRef)} to={'#about'}>
+            About CtoC Books
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(toolsRef)} to={'#tools'}>
-            Compatible technologies
+          <ThemeLink onClick={() => handleScroll(toolsRef)} to={'#categories'}>
+            Book Categories
           </ThemeLink>
         </div>
         <Container size={'large'} spacing={'min'}>
           <div className={styles.content} style={{ paddingTop: '80px' }}>
-            <h3>Built By Matter.</h3>
-            <div id="#builtBy" ref={builtRef}>
+            <h3>About CtoC Books</h3>
+            <div id="#about" ref={builtRef}>
               <p>
-                This theme is proudly brought to you by the team at{' '}
-                <Button target={true} href="https://matterdesign.com.au/">
-                  Matter Design & Digital
-                </Button>{' '}
-                (Matter.).
+                CtoC Books is an independent bookshop specializing in curated literature, bestsellers, and hidden gems. We partner with Amazon to bring you the best books with fast, reliable shipping.
               </p>
               <p>
-                The CtoC Books theme is built for Netlify as an ecommerce theme
-                suitable for JAMStack archtitecture. This theme is free to use
-                through Netlify’s GitHub account, and can be used with any
-                ecommerce platform that support a headless architecture.
+                Our bookshop is built on modern web technology using Gatsby and Netlify, providing a fast, responsive shopping experience. All books link directly to Amazon for secure purchasing and Prime shipping benefits.
               </p>
               <p>
-                Matter. has pre-built connections to microservices available
-                through its JAMM.™ solution. JAMM.™ is a system built to run a
-                headless architecture. JAMM.™ can connect micro-services,
-                orchestrate data and publish websites to an edge network for
-                lighting fast performce. JAMM.™ creates a server-side rendered
-                website that is fast, stable and scalable for high traffic
-                events.
+                We focus on three main categories: Fiction (including romance, mystery, and sci-fi), Non-Fiction (business, self-help, biography), and current bestsellers. Each book is carefully selected for quality and reader appeal.
               </p>
-              <Button target={true} href="https://jamm.matter.design/">
-                Read more about JAMM.™
-              </Button>
-              <img
-                alt={'JAMM Detail'}
-                src={toOptimizedImage('/how-to-use/jamm-sydney-1upd@2x.png')}
-                style={{ display: 'block', height: 'auto' }}
-              />
             </div>
-            <h3>Best of Breed Tools</h3>
-            <div id={'#tools'} ref={toolsRef}>
+            <h3>Book Categories</h3>
+            <div id={'#categories'} ref={toolsRef}>
               <p>
-                Headless architecture enables Composable Commerce. What this
-                means is that you can ‘compose’ a suite of best of breed tools
-                together to create an agile ecommerce system. This approach is
-                the opposite end of the spectrum from a traditional ‘Monolithic’
-                architecture where all the functionality and data comes from one
-                source.
-              </p>
-              <p>
-                Why go with Composable Commerce? History has shown, technology
-                innovation comes from new specialised solutions that find better
-                ways to do things. By creating an architecture that taps into
-                this innovation, you are getting a system that is innovating
-                faster than monolithic solutions giving you a competitive
-                advantage.
-              </p>
-              <p>
-                Matter. has been innovating since 2003, and we have aligned with
-                companies that do it best. The following technologies are either
-                currently available or are on our roadmap for JAMM.™.
+                Our carefully curated selection spans multiple genres and categories to satisfy every reader's taste. From page-turning fiction to life-changing non-fiction, we've got something for everyone.
               </p>
 
-              <strong>Ecommerce:</strong>
+              <strong>Fiction:</strong>
               <ul>
-                <li>BigCommerce</li>
-                <li>VTEX (roadmap)</li>
-                <li>Commercetools (roadmap)</li>
+                <li>Literary Fiction</li>
+                <li>Romance</li>
+                <li>Mystery & Thriller</li>
+                <li>Science Fiction & Fantasy</li>
               </ul>
 
-              <strong>Content Management Systems (CMS):</strong>
+              <strong>Non-Fiction:</strong>
               <ul>
-                <li>Contentful</li>
-                <li>WordPress</li>
-                <li>Sanity</li>
-                <li>Builder.io</li>
+                <li>Business & Entrepreneurship</li>
+                <li>Self-Help & Personal Development</li>
+                <li>Biography & Memoir</li>
+                <li>History & Politics</li>
               </ul>
 
-              <strong>Advanced Search:</strong>
+              <strong>Bestsellers:</strong>
               <ul>
-                <li>Algolia</li>
-                <li>Searchspring (roadmap)</li>
-                <li>XO (roadmap)</li>
-                <li>Syte (roadmap)</li>
-              </ul>
-
-              <strong>Product Information Management (PIM):</strong>
-              <ul>
-                <li>Akeneo</li>
-              </ul>
-
-              <strong>Marketing Automation:</strong>
-              <ul>
-                <li>Klaviyo</li>
-                <li>Ortto</li>
-                <li>Dot Digital</li>
-                <li>Omnisend</li>
-              </ul>
-
-              <strong>Customer Support:</strong>
-              <ul>
-                <li>Gorgias</li>
-                <li>Zendesk</li>
-              </ul>
-
-              <strong>Reviews and User Generated Content:</strong>
-              <ul>
-                <li>Yotpo</li>
-                <li>Trustpilot</li>
-                <li>Reviews.io</li>
-              </ul>
-
-              <strong>Physical Locations:</strong>
-              <ul>
-                <li>Localisr.io</li>
+                <li>New York Times Bestsellers</li>
+                <li>Amazon Top 100</li>
+                <li>Staff Recommendations</li>
+                <li>Award Winners</li>
               </ul>
 
               <p>
-                Our team are fanatical about site speed and the agility of a
-                composable commerce approach. If you need help to setup a
-                Headless architecture, we’d love to hear from you.
+                All our books are available through Amazon with fast shipping and excellent customer service. Click any book to purchase directly through Amazon's secure checkout.
               </p>
 
               <p>
-                <Button
-                  target={true}
-                  href="https://www.matterdesign.com.au/contact/"
-                >
-                  Contact the team at Matter.
+                <Button target={true} href="/shop">
+                  Browse Our Collection
                 </Button>
               </p>
             </div>
           </div>
         </Container>
-        <div className={styles.imageContainer}>
-          <img
-            alt={'Best of Breed tools'}
-            src={toOptimizedImage('/how-to-use/logos@2x.png')}
-          ></img>
-        </div>
       </div>
     </Layout>
   );
