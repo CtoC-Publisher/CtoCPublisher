@@ -70,11 +70,19 @@ const Header = () => {
         {mobileMenu && (
           <div className={styles.mobileMenu}>
             <Link to="/" className={styles.mobileLink}>Home</Link>
-            <Link to="/shop" className={styles.mobileLink}>Books</Link>
+            <div className={styles.mobileDropdown}>
+              <span className={styles.mobileDropdownTitle}>Books</span>
+              <div className={styles.mobileDropdownContent}>
+                <Link to="/shop?category=fiction" className={styles.mobileSubLink}>Fiction</Link>
+                <Link to="/shop?category=non-fiction" className={styles.mobileSubLink}>Non-Fiction</Link>
+                <Link to="/shop?category=bestseller" className={styles.mobileSubLink}>Bestsellers</Link>
+                <Link to="/shop?category=romance" className={styles.mobileSubLink}>Romance</Link>
+              </div>
+            </div>
             <Link to="/blog" className={styles.mobileLink}>Reviews</Link>
             <Link to="/about" className={styles.mobileLink}>About</Link>
-            <Link to="/shop?category=bestseller" className={styles.mobileCta}>
-              View Bestsellers
+            <Link to="/shop" className={styles.mobileCta}>
+              Shop All Books
             </Link>
           </div>
         )}

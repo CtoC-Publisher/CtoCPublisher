@@ -131,6 +131,36 @@
   padding: 0.75rem 0;
 }
 
+.mobileDropdown {
+  margin: 0.5rem 0;
+}
+
+.mobileDropdownTitle {
+  color: #333;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mobileDropdownContent {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.mobileSubLink {
+  color: #666;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  display: block;
+  font-size: 14px;
+}
+
+.mobileSubLink:hover {
+  color: #e67e22;
+}
+
 .mobileCta {
   background: #e67e22;
   color: white;

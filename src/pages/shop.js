@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import * as styles from './shop.module.css';
 
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -11,6 +12,7 @@ import { generateMockBookData } from '../helpers/mock';
 const ShopPage = (props) => {
   const [filteredData, setFilteredData] = useState([]);
   const [activeCategory, setActiveCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
   const allBooks = generateMockBookData(14);
 
   const categories = [
@@ -49,10 +51,11 @@ const ShopPage = (props) => {
   }, []);
 
   useEffect(() => {
+    let filtered = [];
     if (activeCategory === 'all') {
-      setFilteredData(allBooks);
+      filtered = [...allBooks];
     } else {
-      const filtered = allBooks.filter(book => {
+      filtered = allBooks.filter(book => {
         if (activeCategory === 'fiction') {
           return book.tags?.some(tag => ['fiction', 'romance', 'fantasy', 'sci-fi'].includes(tag));
         }
@@ -61,9 +64,20 @@ const ShopPage = (props) => {
         }
         return book.tags?.includes(activeCategory);
       });
-      setFilteredData(filtered);
     }
-  }, [activeCategory, allBooks]);
+    
+    // Apply sorting
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low': return a.price - b.price;
+        case 'price-high': return b.price - a.price;
+        case 'name': return a.name.localeCompare(b.name);
+        default: return 0;
+      }
+    });
+    
+    setFilteredData(filtered);
+  }, [activeCategory, allBooks, sortBy]);
 
   const handleCategoryClick = (categoryKey) => {
     setActiveCategory(categoryKey);
@@ -75,6 +89,21 @@ const ShopPage = (props) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{pageTitle} | CtoC Books - Independent Bookshop</title>
+        <meta name="description" content={`Browse ${filteredData.length} curated books including bestsellers, fiction, non-fiction, and romance. Amazon affiliate bookshop with direct purchase links.`} />
+        <meta name="keywords" content="books, bookshop, fiction, non-fiction, bestsellers, romance, amazon affiliate" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BookStore",
+            "name": "CtoC Books",
+            "description": "Independent bookshop specializing in curated literature and bestsellers",
+            "url": "https://ctoc-books.netlify.app",
+            "numberOfItems": filteredData.length
+          })}
+        </script>
+      </Helmet>
       <div className={styles.root}>
         <Container size={'large'} spacing={'min'}>
           <div className={styles.breadcrumbContainer}>
@@ -101,6 +130,19 @@ const ShopPage = (props) => {
                 {category.label} ({category.count})
               </button>
             ))}
+          </div>
+          
+          {/* Sort Dropdown */}
+          <div className={styles.sortContainer}>
+            <select 
+              value={sortBy} 
+              onChange={(e) => setSortBy(e.target.value)}
+              className={styles.sortSelect}
+            >
+              <option value="name">Sort by Name</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
           </div>
           
           <div className={styles.productContainer}>

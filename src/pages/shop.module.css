@@ -34,6 +34,26 @@
     color: white;
 }
 
+.sortContainer {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sortSelect {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sortSelect:focus {
+    outline: none;
+    border-color: #e67e22;
+}
+
 .productContainer {
     margin-top: 32px;
 }
@@ -62,5 +82,17 @@
         white-space: nowrap;
         font-size: 12px;
         padding: 10px 20px;
+    }
+    
+    .sortContainer {
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+    
+    .sortSelect {
+        width: 100%;
+        max-width: 200px;
+        font-size: 16px;
+        padding: 0.75rem;
     }
 }
