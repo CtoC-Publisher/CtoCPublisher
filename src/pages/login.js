@@ -3,7 +3,7 @@ import { Link, navigate } from 'gatsby';
 import { validateEmail, isEmpty } from '../helpers/general';
 import * as styles from './login.module.css';
 
-import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
+
 import Layout from '../components/Layout/Layout';
 import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
@@ -126,9 +126,7 @@ const LoginPage = (props) => {
           </form>
         </div>
 
-        <div className={styles.attributeGridContainer}>
-          <AttributeGrid />
-        </div>
+
       </div>
     </Layout>
   );

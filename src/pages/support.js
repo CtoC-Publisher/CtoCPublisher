@@ -6,7 +6,7 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import Layout from '../components/Layout/Layout';
 import ThemeLink from '../components/ThemeLink';
-import Policy from '../components/Policy';
+
 import Container from '../components/Container';
 
 const SupportPage = (props) => {
@@ -29,19 +29,19 @@ const SupportPage = (props) => {
         tempElement = <Contact />;
         break;
       case 'policy':
-        tempElement = <Policy />;
+        tempElement = <div><h3>Privacy Policy</h3><p>Privacy policy content coming soon.</p></div>;
         break;
       case 'shipping':
-        tempElement = <Policy />;
+        tempElement = <div><h3>Shipping Information</h3><p>All books ship directly from Amazon with Prime shipping available.</p></div>;
         break;
       case 'returns':
-        tempElement = <Policy />;
+        tempElement = <div><h3>Returns Policy</h3><p>Returns are handled through Amazon's standard return policy.</p></div>;
         break;
       case 'payments':
-        tempElement = <Policy />;
+        tempElement = <div><h3>Payments & Security</h3><p>All payments are processed securely through Amazon.</p></div>;
         break;
       case 'terms':
-        tempElement = <Policy />;
+        tempElement = <div><h3>Terms & Conditions</h3><p>Terms and conditions coming soon.</p></div>;
         break;
       default:
         break;

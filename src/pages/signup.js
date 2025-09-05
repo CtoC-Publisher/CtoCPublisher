@@ -7,7 +7,7 @@ import {
 } from '../helpers/general';
 import * as styles from './signup.module.css';
 
-import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
+
 import Layout from '../components/Layout/Layout';
 import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
@@ -136,9 +136,7 @@ const SignupPage = (props) => {
           </form>
         </div>
 
-        <div className={styles.attributeGridContainer}>
-          <AttributeGrid />
-        </div>
+
       </div>
     </Layout>
   );

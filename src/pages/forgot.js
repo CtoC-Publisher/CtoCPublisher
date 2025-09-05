@@ -5,7 +5,7 @@ import * as styles from './forgot.module.css';
 import Layout from '../components/Layout/Layout';
 import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
-import AttributeGrid from '../components/AttributeGrid';
+
 
 const ForgotPage = (props) => {
   const [email, setEmail] = useState('');
@@ -50,9 +50,7 @@ const ForgotPage = (props) => {
           </div>
         </form>
       </div>
-      <div className={styles.gridContainer}>
-        <AttributeGrid />
-      </div>
+
     </Layout>
   );
 };
