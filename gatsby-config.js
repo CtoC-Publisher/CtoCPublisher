@@ -12,7 +12,6 @@ module.exports = {
         postCssPlugins: [require(`autoprefixer`)],
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

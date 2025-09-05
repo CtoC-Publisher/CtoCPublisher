@@ -22,11 +22,14 @@ const ShopPage = (props) => {
     { key: 'mystery', label: 'Mystery & Thriller', count: allBooks.filter(book => book.tags?.includes('mystery') || book.tags?.includes('thriller')).length }
   ];
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const isBrowser = typeof window !== 'undefined';
+  const urlParams = isBrowser ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const searchQuery = urlParams.get('search');
   const pageTitle = searchQuery ? `Search results for "${searchQuery}"` : 'Browse Books';
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
     const searchParam = urlParams.get('search');
@@ -65,7 +68,9 @@ const ShopPage = (props) => {
   const handleCategoryClick = (categoryKey) => {
     setActiveCategory(categoryKey);
     const newUrl = categoryKey === 'all' ? '/shop' : `/shop?category=${categoryKey}`;
-    window.history.pushState({}, '', newUrl);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({}, '', newUrl);
+    }
   };
 
   return (
