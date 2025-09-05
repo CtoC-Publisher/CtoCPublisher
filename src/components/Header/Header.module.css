@@ -112,6 +112,12 @@
   justify-content: end;
 }
 
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .burgerIcon {
     display: none;
 }
