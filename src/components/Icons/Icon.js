@@ -14,6 +14,7 @@ import Delivery from './Delivery';
 import Facebook from './Facebook';
 import FacebookInverse from './FacebookInverse';
 import Filter from './Filter';
+import Github from './Github';
 import Heart from './Heart';
 import HeartFill from './HeartFill';
 import Instagram from './Instagram';
@@ -58,6 +59,8 @@ function Icon(props) {
       return <FacebookInverse />;
     case 'filter':
       return <Filter />;
+    case 'github':
+      return <Github />;
     case 'heart':
       return <Heart />;
     case 'heartFill':

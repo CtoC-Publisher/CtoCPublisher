@@ -14,8 +14,9 @@
   "social": {
     "facebook": "https://www.facebook.com/ctocpublisher/",
     "instagram": "https://www.instagram.com/ctocpublisher",
-    "twitter": "https://twitter.com/ctocpublisher",
-    "youtube": "https://www.youtube.com/channel/ctocpublisher"
+    "twitter": "https://x.com/ctocpublisher",
+    "youtube": "https://www.youtube.com/channel/ctocpublisher",
+    "github": "https://github.com/CtoC-Publisher/CtoCPublisher"
   },
   "paymentOptions": {
     "visa": true,

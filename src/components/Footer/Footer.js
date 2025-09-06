@@ -103,6 +103,16 @@ const Footer = (prop) => {
                     <Icon symbol={'instagram'}></Icon>
                   </div>
                 )}
+                {Config.social.youtube && (
+                  <div onClick={() => handleSocialClick('youtube')} className={styles.socialIconContainer}>
+                    <Icon symbol={'youtube'}></Icon>
+                  </div>
+                )}
+                {Config.social.github && (
+                  <div onClick={() => handleSocialClick('github')} className={styles.socialIconContainer}>
+                    <Icon symbol={'github'}></Icon>
+                  </div>
+                )}
               </div>
             </div>
           </div>
