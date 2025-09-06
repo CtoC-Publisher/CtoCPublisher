@@ -5,7 +5,7 @@
         "author": "Rebecca Yarros",
         "price": 18.99,
         "alt": "Fourth Wing book cover",
-        "image": "/products/fourth-wing.jpg",
+    "image": "/Amazon Books Images/Fourth Wing (The Empyrean Series ...  Amazon.com Fourth Wing (The Empyrean Series.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/1649374046?tag=ctocpublisher-20",
         "tags": ["fantasy", "romance", "bestseller"],
         "description": "Enter the brutal and elite war college, where dragon riders are made and the weak don't survive."
@@ -16,7 +16,7 @@
         "author": "James Clear",
         "price": 13.99,
         "alt": "Atomic Habits book cover",
-        "image": "/products/atomic-habits.jpg",
+    "image": "/Amazon Books Images/Atomic Habits book cover Atomic Habits James Clear.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/0735211299?tag=ctocpublisher-20",
         "tags": ["self-help", "bestseller", "productivity", "non-fiction"],
         "description": "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
@@ -27,7 +27,7 @@
         "author": "Colleen Hoover",
         "price": 16.99,
         "alt": "It Ends with Us book cover",
-        "image": "/products/it-ends-with-us.jpg",
+    "image": "/Amazon Books Images/It Ends with Us book cover It Ends with Us Colleen Hoover.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/1501110365?tag=ctocpublisher-20",
         "tags": ["romance", "contemporary", "bestseller", "fiction"],
         "description": "A novel about a woman who must learn the difference between the courage to stay and the courage to go."
@@ -38,7 +38,7 @@
         "author": "Taylor Jenkins Reid",
         "price": 16.99,
         "alt": "The Seven Husbands of Evelyn Hugo book cover",
-        "image": "/products/seven-husbands.jpg",
+    "image": "/Amazon Books Images/The Seven Husbands of Evelyn Hugo book cover The Seven Husbands of Evelyn Hugo Taylor Jenkins Reid.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/1501139231?tag=ctocpublisher-20",
         "tags": ["fiction", "historical", "bestseller"],
         "description": "A reclusive Hollywood icon finally tells her story to a young journalist."
@@ -49,7 +49,7 @@
         "author": "Delia Owens",
         "price": 15.99,
         "alt": "Where the Crawdads Sing book cover",
-        "image": "/products/crawdads-sing.jpg",
+    "image": "/Amazon Books Images/Where the Crawdads Sing.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/0735219109?tag=ctocpublisher-20",
         "tags": ["fiction", "mystery", "bestseller"],
         "description": "A coming-of-age story and murder mystery set in the marshlands of North Carolina."
@@ -60,7 +60,7 @@
         "author": "Matt Haig",
         "price": 14.99,
         "alt": "The Midnight Library book cover",
-        "image": "/products/midnight-library.jpg",
+    "image": "/Amazon Books Images/The Midnight Library Matt Haig.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/0525559477?tag=ctocpublisher-20",
         "tags": ["fiction", "philosophical", "bestseller"],
         "description": "A novel about all the choices that go into a life well lived."
@@ -71,7 +71,7 @@
         "author": "Tara Westover",
         "price": 17.99,
         "alt": "Educated memoir book cover",
-        "image": "/products/educated.jpg",
+    "image": "/Amazon Books Images/Educated Tara Westover.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0399590501?tag=ctocpublisher-20",
         "tags": ["memoir", "non-fiction", "bestseller"],
         "description": "A memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University."
@@ -82,7 +82,7 @@
         "author": "Peter Thiel",
         "price": 16.99,
         "alt": "Zero to One business book cover",
-        "image": "/products/zero-to-one.jpg",
+    "image": "/Amazon Books Images/Zero to One Peter Thiel.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/0804139296?tag=ctocpublisher-20",
         "tags": ["business", "non-fiction", "bestseller", "startup"],
         "description": "Notes on Startups, or How to Build the Future"
@@ -93,7 +93,7 @@
         "author": "Stephen R. Covey",
         "price": 15.99,
         "alt": "7 Habits book cover",
-        "image": "/products/7-habits.jpg",
+    "image": "/Amazon Books Images/The 7 Habits of Highly Effective People Stephen R. Covey.jpeg",
         "amazonUrl": "https://www.amazon.com/dp/1982137274?tag=ctocpublisher-20",
         "tags": ["self-help", "non-fiction", "bestseller", "productivity"],
         "description": "Powerful Lessons in Personal Change"
