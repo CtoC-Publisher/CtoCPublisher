@@ -5,13 +5,13 @@ import Layout from '../components/Layout';
 import Container from '../components/Container';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ProductCardGrid from '../components/ProductCardGrid';
-import { generateMockBookData } from '../helpers/mock';
+import products from '../helpers/product.json';
 import Title from '../components/Title';
 
 const ProductsPage = (props) => {
-  const fantasyBooks = generateMockBookData(6, 'fantasy');
-  const romanceBooks = generateMockBookData(6, 'romance');
-  const selfHelpBooks = generateMockBookData(6, 'self-help');
+  const fantasyBooks = products.filter(book => book.tags?.includes('fantasy'));
+  const romanceBooks = products.filter(book => book.tags?.includes('romance'));
+  const selfHelpBooks = products.filter(book => book.tags?.includes('self-help'));
 
   return (
     <Layout>
