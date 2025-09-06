@@ -152,5 +152,17 @@
         "amazonUrl": "https://www.amazon.com/dp/0593336840?tag=ctocpublisher-20",
         "tags": ["romance", "contemporary", "bestseller", "fiction", "stem"],
         "description": "A theoretical physicist's life gets complicated when she meets her academic rival."
+    },
+    {
+        "productCode": "B0FG1BJTDL",
+        "name": "The Thursday Murder Club",
+        "author": "Richard Osman",
+        "price": 12.99,
+        "alt": "The Thursday Murder Club book cover",
+        "image": "/products/thursday-murder-club.jpg",
+        "amazonUrl": "https://www.amazon.co.uk/dp/B0FG1BJTDL?tag=ctocpublisher-20",
+        "amazonUrlUK": "https://www.amazon.co.uk/dp/B0FG1BJTDL?tag=ctocpublisher-20",
+        "tags": ["mystery", "cozy-mystery", "bestseller", "fiction", "uk"],
+        "description": "Four unlikely friends meet weekly to investigate cold cases. When a real murder occurs, they find themselves in the middle of their first live case."
     }
 ]

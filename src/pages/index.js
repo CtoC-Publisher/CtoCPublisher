@@ -6,6 +6,7 @@ import BlogPreviewGrid from '../components/BlogPreviewGrid';
 import Layout from '../components/Layout/Layout';
 import ProductCardGrid from '../components/ProductCardGrid';
 import Title from '../components/Title';
+import ParticleBackground from '../components/ParticleBackground';
 
 import { generateMockBlogData, generateMockBookData } from '../helpers/mock';
 
@@ -24,6 +25,7 @@ const IndexPage = () => {
 
   return (
     <Layout disablePaddingBottom>
+      <ParticleBackground />
       {/* Hero Container */}
       <Hero
         maxWidth={'500px'}

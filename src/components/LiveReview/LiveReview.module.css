@@ -1,0 +1,135 @@
+.container {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin: 24px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e67e22;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+.star.filled {
+  color: #e67e22;
+  text-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+.star.interactive {
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.star.interactive:hover {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+.reviewForm {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(230, 126, 34, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.3);
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #e67e22;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.review:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.verified {
+  background: #27ae60;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
