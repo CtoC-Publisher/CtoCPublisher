@@ -28,7 +28,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className={styles.desktopNav}>
             <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/shop" className={styles.navLink}>Books</Link>
+            <div className={styles.dropdown}>
+              <Link to="/shop" className={styles.navLink}>Books</Link>
+              <div className={styles.dropdownContent}>
+                <Link to="/shop?category=fiction" className={styles.dropdownLink}>Fiction</Link>
+                <Link to="/shop?category=non-fiction" className={styles.dropdownLink}>Non-Fiction</Link>
+                <Link to="/shop?category=bestseller" className={styles.dropdownLink}>Bestsellers</Link>
+                <Link to="/shop?category=romance" className={styles.dropdownLink}>Romance</Link>
+                <Link to="/shop" className={styles.dropdownLink}>All Books</Link>
+              </div>
+            </div>
             <Link to="/blog" className={styles.navLink}>Reviews</Link>
             <Link to="/about" className={styles.navLink}>About</Link>
           </nav>
@@ -47,11 +56,8 @@ const Header = () => {
             </button>
           </form>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className={styles.ctaButtons}>
-            <Link to="/shop?category=bestseller" className={styles.ctaButton}>
-              Bestsellers
-            </Link>
             <Link to="/shop" className={styles.ctaPrimary}>
               Shop Now
             </Link>
