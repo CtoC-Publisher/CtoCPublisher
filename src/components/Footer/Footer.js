@@ -76,7 +76,7 @@ const Footer = (prop) => {
             <div className={styles.footerSection}>
               <h3 className={styles.sectionTitle}>Newsletter</h3>
               <p className={styles.newsletterText}>
-                Get 15% off your first purchase! Plus, be the first to know about sales, new product launches and exclusive offers!
+                Get book recommendations, exclusive deals, and be the first to know about new releases from your favorite authors!
               </p>
               <form className={styles.newsletterForm} onSubmit={(e) => subscribeHandler(e)}>
                 <FormInputField
