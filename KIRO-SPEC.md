@@ -255,6 +255,10 @@ collections:
 
 ✅ **Instant Deployment** - Zero configuration required  
 ✅ **Amazon Integration** - Affiliate links auto-configured  
+✅ **Real Book Images** - All book covers use actual images from `/static/products/`  
+✅ **Mobile-Friendly Layout** - Product cards and grids optimized for mobile screens  
+✅ **Dark Theme** - Homepage and main sections use a modern dark color scheme  
+✅ **Navigation & Hover Effects** - CtoC Books home button and navigation have modern hover effects  
 ✅ **Responsive Design** - Mobile-optimized bookshop  
 ✅ **SEO Optimized** - Search engine ready  
 ✅ **Content Management** - Easy book catalog updates  

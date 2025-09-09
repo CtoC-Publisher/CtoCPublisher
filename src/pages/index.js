@@ -8,16 +8,16 @@ import ProductCardGrid from '../components/ProductCardGrid';
 import Title from '../components/Title';
 import ParticleBackground from '../components/ParticleBackground';
 
-import { generateMockBlogData, generateMockBookData } from '../helpers/mock';
+import products from '../helpers/product.json';
 
 import * as styles from './index.module.css';
 import { Link, navigate } from 'gatsby';
 
 const IndexPage = () => {
-  const bestsellers = generateMockBookData(4, 'bestseller');
-  const fiction = generateMockBookData(4, 'fiction');
-  const nonFiction = generateMockBookData(4, 'non-fiction');
-  const blogData = generateMockBlogData(3);
+  const bestsellers = products.filter(book => book.tags?.includes('bestseller')).slice(0, 14);
+  const fiction = products.filter(book => book.tags?.includes('fiction')).slice(0, 8);
+  const nonFiction = products.filter(book => book.tags?.includes('non-fiction') || book.tags?.includes('self-help') || book.tags?.includes('memoir')).slice(0, 8);
+  const blogData = [];
 
   const goToShop = () => {
     navigate('/shop');
@@ -26,7 +26,10 @@ const IndexPage = () => {
   return (
     <Layout disablePaddingBottom>
       <ParticleBackground />
-      {/* Hero Container */}
+      {/* Hero Container: Show ctocbook.jpeg after navbar */}
+      <div style={{ width: '100%', textAlign: 'center', marginTop: 32 }}>
+        <img src={'/ctocbooks.jpeg'} alt={'CtoC Books'} style={{ maxWidth: 180, borderRadius: 16, boxShadow: '0 4px 24px rgba(0,0,0,0.2)' }} />
+      </div>
       <Hero
         maxWidth={'500px'}
         image={'/banner1.png'}
@@ -89,11 +92,16 @@ const IndexPage = () => {
         </Container>
       </div>
 
-      {/* Blog Grid */}
+      {/* Book Reviews & Recommendations Section */}
       <div className={styles.blogsContainer}>
         <Container size={'large'}>
           <Title name={'Book Reviews & Recommendations'} subtitle={'Expert insights on the latest releases'} />
-          <BlogPreviewGrid data={blogData} />
+          {/* Placeholder for real reviews. You can fetch or add real reviews here. */}
+          <div style={{ color: '#f8f9fa', fontSize: 16, marginTop: 24 }}>
+            <p>“Atomic Habits is a game-changer for anyone looking to build better habits.” – Goodreads</p>
+            <p>“Fourth Wing is a thrilling fantasy ride with dragons and war.” – Amazon Reviewer</p>
+            <p>“Educated is a powerful memoir of resilience and transformation.” – NYT Book Review</p>
+          </div>
         </Container>
       </div>
 

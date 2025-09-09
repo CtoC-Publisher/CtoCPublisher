@@ -170,30 +170,70 @@
     margin-right: 16px;
 }
 
-@media (max-width: 600px) {
-    .imageContainer img{
-        height: 300px !important;
+@media (max-width: 768px) {
+    .root {
+        margin: 0 8px 16px;
+        border-radius: 12px;
     }
-
+    
+    .root img {
+        height: 280px;
+    }
+    
+    .detailsContainer {
+        padding: 0 16px 20px;
+    }
+    
     .productName {
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 16px;
+        font-size: 15px;
+        line-height: 18px;
     }
-
+    
     .author {
-        font-size: 11px;
-        line-height: 14px;
-    }
-
-    .prices span {
         font-size: 13px;
         line-height: 16px;
+    }
+    
+    .prices span {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
-@media (max-width: 400px) {
-    .imageContainer img{
-        height: 220px !important;
+@media (max-width: 480px) {
+    .root {
+        margin: 0 4px 12px;
+        border-radius: 8px;
+    }
+    
+    .root img {
+        height: 240px;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .detailsContainer {
+        padding: 0 12px 16px;
+        margin-top: 12px;
+    }
+    
+    .productName {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+    }
+    
+    .author {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .prices {
+        margin-top: 12px;
+    }
+    
+    .prices span {
+        font-size: 15px;
+        line-height: 18px;
     }
 }

@@ -93,33 +93,34 @@ Customize `/src/pages/index.js` for:
 
 ## Current Implementation Status ✅
 
-### ✅ COMPLETED: Core Bookshop Features
-1. **Header Navigation with Books Dropdown** ✅
-   - Books menu with Fiction, Non-Fiction, and Bestsellers categories
-   - Responsive dropdown with organized subcategories
-   - Direct links to filtered shop pages
+### ✅ COMPLETED: Major Refactor & Features
+1. **Real Book Images** ✅
+   - All book covers now use actual images from `/static/products/`
+   - `product.json` updated to reference correct image paths
 
-2. **Homepage Category Sections** ✅
-   - Amazon Bestsellers section with 4-column grid
-   - Fiction Favorites section with curated titles
-   - Non-Fiction Essentials section
-   - Alternating background colors for visual separation
+2. **Mobile-Friendly Layout** ✅
+   - Product cards and grids optimized for mobile screens
+   - Smaller images and text for better mobile experience
 
-3. **Shop Page with Category Filtering** ✅
-   - Dynamic category filter buttons (All, Bestsellers, Fiction, etc.)
-   - URL parameter support (?category=fiction)
-   - Real-time book count per category
-   - Mobile-responsive filter buttons
+3. **Dark Theme** ✅
+   - Homepage and main sections use a modern dark color scheme
+   - Improved readability and visual appeal
 
-4. **Amazon Affiliate Integration** ✅
+4. **Navigation & Hover Effects** ✅
+   - CtoC Books home button has a modern hover effect
+   - Header navigation and dropdowns are interactive and responsive
+
+5. **Amazon Integration** ✅
    - All books link directly to Amazon with affiliate tag
-   - Product data includes Amazon ASINs and URLs
-   - "Buy on Amazon" functionality in ProductCard component
+   - Product cards show "Buy on Amazon" functionality
 
-5. **Book Database** ✅
-   - 14 curated bestsellers in product.json
-   - Proper categorization with tags (fiction, bestseller, etc.)
-   - Author information and pricing
+6. **Homepage Sections** ✅
+   - Amazon Bestsellers, Fiction Favorites, Non-Fiction Essentials, Book Reviews & Recommendations
+   - Real book data and images displayed in all sections
+
+7. **Completed Tasks** ✅
+   - All code and images committed and pushed to `active` branch
+   - Ready for deployment and review
 
 ## Next Implementation Tasks 🚀
 
@@ -181,7 +182,7 @@ npm start
 # Edit src/helpers/product.json
 
 # 4. Update book cover images
-cp /path/to/book/covers/* ./static/products/
+# Copy new book covers to ./static/products/ and update product.json image paths
 
 # 5. Find and fix footer branding
 grep -r "SYDNEY" src/
@@ -191,12 +192,13 @@ grep -r "Built by Matter" src/
 ### Key Files Modified
 - ✅ `/src/components/Header/Header.js` - Books dropdown navigation
 - ✅ `/src/components/Header/Header.module.css` - Dropdown styling
-- ✅ `/src/pages/index.js` - Category sections layout
-- ✅ `/src/pages/index.module.css` - Section styling
+- ✅ `/src/pages/index.js` - Homepage refactor: real images, dark theme, mobile-friendly
+- ✅ `/src/pages/index.module.css` - Section styling, dark theme
 - ✅ `/src/pages/shop.js` - Category filtering with buttons
 - ✅ `/src/pages/shop.module.css` - Filter button styling
-- ✅ `/src/helpers/product.json` - Book database with Amazon links
-- ✅ `/src/components/ProductCard/ProductCard.js` - Amazon affiliate integration
+- ✅ `/src/helpers/product.json` - Book database with Amazon links and image paths
+- ✅ `/src/components/ProductCard/ProductCard.js` - Amazon affiliate integration, mobile-friendly
+- ✅ `/src/components/Brand/Brand.module.css` - Home button hover effect
 
 ### Files Still To Modify
 - 🔄 `/src/components/Footer/` - Update branding
@@ -238,3 +240,122 @@ npm run build
 ---
 
 *CtoC Books - Independent Bookshop specializing in curated literature and Amazon bestsellers.* 📚
+
+
+CTOC Books - Independent Bookshop 📚
+
+A customized Gatsby e-commerce site for CTOC Books, an independent bookshop specializing in curated literature, bestsellers, and hidden gems.
+
+Features
+
+Book Categories: Fiction, Non-Fiction, Children's books with detailed subcategories 📖
+Staff Picks: Curated recommendations from knowledgeable staff 🎯
+Book Reviews: Insights and recommendations from the team 📝
+Community Focus: Book clubs, author events, and literary discussions 🚀
+Responsive Design: Mobile-friendly shopping experience 📱
+Quick Start
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Build for production
+npm run build
+Visit http://localhost:5000 to see your bookshop site. 🌐
+
+Customization
+
+Adding New Books 📚
+
+Edit /src/helpers/product.json to add new books:
+
+{
+  "name": "Book Title",
+  "vendor": "Author Name", 
+  "price": 16.99,
+  "tags": ["fiction", "bestseller"],
+  "description": "Book description..."
+}
+Navigation & Categories 🧭
+
+Update /src/config.json to modify:
+
+Header navigation and book categories
+Footer links
+Filter options (genre, format, age group)
+Homepage Content 🏠
+
+Customize /src/pages/index.js for:
+
+Hero sections and promotional banners
+Featured collections and new releases
+Staff picks and community events
+Book Categories 📂
+
+Fiction: Literary, Mystery & Thriller, Science Fiction, Romance
+Non-Fiction: Biography, History, Self-Help, Business
+Children's: Picture Books, Young Adult, Educational
+Technology Stack 🛠️
+
+Gatsby - React-based static site generator
+CSS Modules - Scoped styling
+React Helmet - Document head management
+Deployment 🚀
+
+Deploy to Netlify, Vercel, or any static hosting service:
+
+npm run build
+# Upload 'public' folder to your hosting provider
+Originally based on the Gatsby E-commerce theme by Matter Design, customized for CTOC Books. 🎨
+
+
+
+✅ Major Task: Make Website Responsive and Fix Image Issues
+
+Overview
+
+The website hosted at ctocpublisher.netlify.app currently has two major issues:
+
+Images (book covers, reviews) are not displaying — broken image icons appear instead.
+The website has layout issues on mobile — it needs to be properly responsive.
+🔧 Issues to Fix
+
+1. 🔄 Fix Broken Images
+
+Book cover images (e.g., It Ends With Us, Atomic Habits) are not loading.
+
+Likely causes:
+
+Incorrect image src URLs
+Broken links to assets
+Case-sensitive filename mismatches
+Hosting or CORS issues
+Action Items:
+
+Verify all image file paths in the HTML/JSX/CSS.
+Check if images are hosted locally or via URL.
+Ensure images are included in the /public folder (for React) or correctly linked.
+Test image links in browser directly to confirm they work.
+Add fallback alt text or placeholders in case an image fails.
+2. 📱 Make the Website Mobile-Responsive
+
+On small screens (like mobile), content is cramped or misaligned.
+
+Horizontal scrolling and layout stacking issues observed.
+
+Action Items:
+
+Use responsive units (%, vw, vh, rem, etc.).
+Implement CSS media queries to adjust layout for different screen sizes.
+Ensure book cards and review components stack properly on mobile.
+Use flexbox/grid for layout and spacing.
+Set max-width and object-fit: cover for images to prevent distortion.
+Ensure the navigation bar and search bar are responsive.
+✅ Completion Criteria
+
+All images load successfully on both desktop and mobile.
+Layout adjusts fluidly on all screen sizes (desktop, tablet, mobile).
+No horizontal scrollbars on mobile view.
+All interactive components (search bar, menu, etc.) function on mobile.

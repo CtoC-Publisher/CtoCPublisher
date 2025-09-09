@@ -319,56 +319,62 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .footerGrid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
     }
-
+    
     .socialContainer {
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
-
+    
     .contentBottom {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-
+    
     .copyrightContainer {
-        margin-top: 40px;
+        margin-top: 20px;
         align-items: center;
+        text-align: center;
     }
-
-    .newsLetterForm {
-        margin-bottom: 30px;
-    }
-
-    .settings > div {
-        max-width: unset;
-    }
-
-    .footerLinks {
-        display: none;
-    }
-
-    .mobileFooterLinks {
-        display: block;
-    }
-
-    .footerLinkContainer {
-        margin-bottom: 16px;
-    }
-
+    
     .settings {
-        display: grid;
-        grid-template-columns: 0.55fr 0.45fr;
-        gap: 16px;
+        justify-content: center;
+        gap: 12px;
     }
+}
 
+@media (max-width: 480px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .sectionTitle {
+        font-size: 14px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .linkList {
+        font-size: 13px;
+        gap: 0.4rem;
+    }
+    
+    .newsletterText {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
     .socialIconContainer {
-        margin-right: 16px;
+        width: 40px;
+        height: 40px;
     }
-
-    .socialIconContainer:first-child {
-        margin-right: 0px;
+    
+    .copyrightContainer span {
+        font-size: 12px;
+        text-align: center;
     }
 }

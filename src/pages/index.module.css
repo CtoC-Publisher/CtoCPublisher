@@ -5,10 +5,10 @@
 .messageContainer {
     text-align: center;
     padding: 80px 0px;
-    background: linear-gradient(135deg, #fafbfc 0%, #ffffff 30%, #f8f9fa 70%, #ffffff 100%);
+    background: linear-gradient(135deg, #23272f 0%, #181a20 30%, #23272f 70%, #181a20 100%);
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .messageContainer::before {
@@ -31,10 +31,7 @@
     font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
-    background: linear-gradient(135deg, #e67e22 0%, #f39c12 30%, #e67e22 70%, #d35400 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #f8f9fa;
     text-transform: uppercase;
     letter-spacing: -0.01em;
     margin: 0;
@@ -66,13 +63,13 @@
     font-size: 52px;
     line-height: 58px;
     margin-bottom: 48px;
-    color: #1a1a1a;
+    color: #f8f9fa;
     position: relative;
     display: inline-block;
     width: 100%;
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e67e22 50%, #f8f9fa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -135,8 +132,8 @@
     padding: 120px 0px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #ffffff 0%, #fafbfc 30%, #f8f9fa 70%, #ffffff 100%);
-    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    background: linear-gradient(135deg, #181a20 0%, #23272f 30%, #181a20 70%, #23272f 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .categorySection::before {
@@ -188,4 +185,5 @@
 .blogsContainer {
     margin-top: 96px;
     padding: 80px 0px;
+    background: linear-gradient(135deg, #23272f 0%, #181a20 100%);
 }

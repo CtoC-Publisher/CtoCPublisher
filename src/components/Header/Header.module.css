@@ -199,6 +199,7 @@
   .header {
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
+    padding: 1rem 0;
   }
   
   .desktopNav,
@@ -215,16 +216,21 @@
   }
   
   .searchForm {
-    max-width: 200px;
+    max-width: 220px;
+    border-radius: 25px;
   }
   
   .searchInput {
-    font-size: 12px;
-    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    padding: 0.75rem 1rem;
   }
   
   .searchButton {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .dropdown:hover .dropdownContent {
+    display: none;
   }
 }
 
@@ -277,13 +283,30 @@
 @media (max-width: 480px) {
   .header {
     grid-template-columns: auto 1fr auto;
+    gap: 0.75rem;
+    padding: 0.875rem 0;
   }
   
   .searchForm {
-    max-width: 150px;
+    max-width: 160px;
   }
   
-  .dropdown:hover .dropdownContent {
-    display: none;
+  .searchInput {
+    font-size: 13px;
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .searchButton {
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .mobileLink {
+    padding: 1rem 0;
+    font-size: 16px;
+  }
+  
+  .mobileSubLink {
+    padding: 0.75rem 0;
+    font-size: 15px;
   }
 }
