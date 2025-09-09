@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import Cart from '../Cart/Cart';
+import { CartProvider } from '../../context/CartProvider';
 import * as styles from './Layout.module.css';
 
 // CSS not modular here to provide global styles
@@ -11,7 +13,7 @@ import './Globals.css';
 
 const Layout = ({ props, children, disablePaddingBottom = false }) => {
   return (
-    <>
+    <CartProvider>
       <Helmet>
         {/* Add any sitewide scripts here */}
         <link
@@ -36,7 +38,8 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
         {children}
       </main>
       <Footer />
-    </>
+      <Cart />
+    </CartProvider>
   );
 };
 

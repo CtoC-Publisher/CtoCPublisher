@@ -28,7 +28,7 @@ const ProductCard = (props) => {
     <div className={styles.root}>
       <a href={amazonUrl} target="_blank" rel="noopener noreferrer">
         <div className={styles.imageContainer}>
-          <img src={image || '/src/products/ctocbook.jpeg'} alt={imageAlt}></img>
+          <img src={image || '/ctocbooks.jpeg'} alt={imageAlt}></img>
         </div>
       </a>
       <div className={styles.detailsContainer}>
