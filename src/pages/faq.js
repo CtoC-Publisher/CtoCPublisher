@@ -12,7 +12,7 @@ const FaqPage = (props) => {
         <Banner
           maxWidth={'650px'}
           name={`Frequently Asked Questions`}
-          bgImage={'/faqCover.png'}
+          bgImage={'/ctocbooks.jpeg'}
           color={'var(--standard-white)'}
           height={'350px'}
         />

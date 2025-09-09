@@ -27,7 +27,7 @@ const AboutPage = (props) => {
         {/* Hero Container */}
         <Hero
           maxWidth={'900px'}
-          image={'/about.png'}
+          image={'/ctocbooks.jpeg'}
           title={`CtoC Publisher \n Independent publishing since 2020`}
         />
 
@@ -63,7 +63,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt brand'} src={toOptimizedImage('/about1.png')}></img>
+          <img alt={'CtoC Books Publishing'} src={'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop'} style={{width: '100%', maxWidth: '600px'}}></img>
         </div>
 
         <Container size={'large'} spacing={'min'}>
@@ -83,7 +83,7 @@ const AboutPage = (props) => {
                 <li>Support local and emerging authors</li>
                 <li>Foster community through literature</li>
               </ol>
-              <img alt={'publishing house'} src={toOptimizedImage('/about2.png')}></img>
+              <img alt={'Independent Publishing'} src={'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop'} style={{width: '100%', maxWidth: '600px'}}></img>
             </div>
             <h3>Community</h3>
             <div id={'#community'} ref={sustainabilityRef}>
@@ -109,7 +109,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt backwards'} src={toOptimizedImage('/about3.png')}></img>
+          <img alt={'Literary Community'} src={'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&h=400&fit=crop'} style={{width: '100%', maxWidth: '600px'}}></img>
         </div>
       </div>
     </Layout>

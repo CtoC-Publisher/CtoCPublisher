@@ -72,7 +72,7 @@ const SupportPage = (props) => {
         <Banner
           maxWidth={'650px'}
           name={current.title}
-          bgImage={'/support.png'}
+          bgImage={'/ctocbooks.jpeg'}
           color={'var(--standard-white)'}
           height={'350px'}
         />

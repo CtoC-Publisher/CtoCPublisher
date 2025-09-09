@@ -15,7 +15,7 @@ const SamplePage = (props) => {
             <Blog
               category={'design'}
               title={'Friends of CtoC Books: Flora Fricker'}
-              image={'/blogFeatured.png'}
+              image={'/ctocbooks.jpeg'}
               alt={''}
             >
               <div className={styles.content}>
@@ -50,10 +50,10 @@ const SamplePage = (props) => {
               </div>
               <div className={styles.imagesContainer}>
                 <div className={styles.imageContainer}>
-                  <img src={toOptimizedImage('/cloth.png')} alt={'sample1'} />
+                  <img src={'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop'} alt={'Books'} />
                 </div>
                 <div className={styles.imageContainer}>
-                  <img src={toOptimizedImage('/collections/collection1.png')} alt={'sample2'} />
+                  <img src={'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'} alt={'Reading'} />
                 </div>
               </div>
               <div className={styles.content}>

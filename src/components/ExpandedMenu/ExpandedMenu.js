@@ -31,8 +31,8 @@ const ExpandedMenu = (props) => {
         })}
       </div>
       <div className={styles.imageContainer}>
-        <img src={toOptimizedImage('/headerPic1.png')} alt={'header 1'}></img>
-        <img src={toOptimizedImage('/headerPic2.png')} alt={'header 2'}></img>
+        <img src={toOptimizedImage('/ctocbooks.jpeg')} alt={'CtoC Books'} style={{maxWidth: '200px'}}></img>
+        <img src={'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=150&fit=crop'} alt={'Books'} style={{maxWidth: '200px'}}></img>
       </div>
     </div>
   );

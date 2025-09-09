@@ -11,7 +11,7 @@ import { toOptimizedImage } from '../../helpers/general';
 
 const AddNotification = (props) => {
   const sampleCartItem = {
-    image: '/products/pdp1.jpeg',
+    image: 'https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg',
     alt: '',
     name: 'Lambswool Crew Neck Jumper',
     price: 220,

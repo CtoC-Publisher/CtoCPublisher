@@ -19,11 +19,11 @@ const BlogPage = (props) => {
       <div className={styles.root}>
         <Hero
           maxWidth={'400px'}
-          image={toOptimizedImage('/blogCover.png')}
-          title={`The new standard of Closing`}
+          image={toOptimizedImage('/ctocbooks.jpeg')}
+          title={`CtoC Books Blog`}
           ctaLink={'read story'}
           ctaTo={'/blog/sample'}
-          header={'design'}
+          header={'books'}
         />
 
         <div className={styles.navContainer}>
