@@ -5,7 +5,7 @@
         "author": "Rebecca Yarros",
         "price": 18.99,
         "alt": "Fourth Wing book cover",
-        "image": "/products/pdp1.jpeg",
+        "image": "/fourth-wing.jpg",
         "amazonUrl": "https://www.amazon.com/dp/1649374046?tag=ctocpublisher-20",
         "tags": ["fantasy", "romance", "bestseller"],
         "description": "Enter the brutal and elite war college, where dragon riders are made and the weak don't survive."
@@ -16,7 +16,7 @@
         "author": "James Clear",
         "price": 13.99,
         "alt": "Atomic Habits book cover",
-        "image": "/products/pdp2.jpeg",
+        "image": "/atomic-habits.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0735211299?tag=ctocpublisher-20",
         "tags": ["self-help", "bestseller", "productivity", "non-fiction"],
         "description": "An Easy & Proven Way to Build Good Habits & Break Bad Ones"
@@ -27,7 +27,7 @@
         "author": "Colleen Hoover",
         "price": 16.99,
         "alt": "It Ends with Us book cover",
-        "image": "/products/pdp3.jpeg",
+        "image": "/it-ends-with-us.jpg",
         "amazonUrl": "https://www.amazon.com/dp/1501110365?tag=ctocpublisher-20",
         "tags": ["romance", "contemporary", "bestseller", "fiction"],
         "description": "A novel about a woman who must learn the difference between the courage to stay and the courage to go."
@@ -38,7 +38,7 @@
         "author": "Taylor Jenkins Reid",
         "price": 16.99,
         "alt": "The Seven Husbands of Evelyn Hugo book cover",
-        "image": "/products/pdp4.jpeg",
+        "image": "/seven-husbands.jpg",
         "amazonUrl": "https://www.amazon.com/dp/1501139231?tag=ctocpublisher-20",
         "tags": ["fiction", "historical", "bestseller"],
         "description": "A reclusive Hollywood icon finally tells her story to a young journalist."
@@ -49,7 +49,7 @@
         "author": "Delia Owens",
         "price": 15.99,
         "alt": "Where the Crawdads Sing book cover",
-        "image": "/products/shirt1.jpg",
+        "image": "/crawdads-sing.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0735219109?tag=ctocpublisher-20",
         "tags": ["fiction", "mystery", "bestseller"],
         "description": "A coming-of-age story and murder mystery set in the marshlands of North Carolina."
@@ -60,7 +60,7 @@
         "author": "Matt Haig",
         "price": 14.99,
         "alt": "The Midnight Library book cover",
-        "image": "/products/shirt2.jpg",
+        "image": "/midnight-library.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0525559477?tag=ctocpublisher-20",
         "tags": ["fiction", "philosophical", "bestseller"],
         "description": "A novel about all the choices that go into a life well lived."
@@ -71,7 +71,7 @@
         "author": "Tara Westover",
         "price": 17.99,
         "alt": "Educated memoir book cover",
-        "image": "/products/shirt3.jpg",
+        "image": "/educated.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0399590501?tag=ctocpublisher-20",
         "tags": ["memoir", "non-fiction", "bestseller"],
         "description": "A memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University."
@@ -82,7 +82,7 @@
         "author": "Peter Thiel",
         "price": 16.99,
         "alt": "Zero to One business book cover",
-        "image": "/products/woman1.jpeg",
+        "image": "/zero-to-one.jpg",
         "amazonUrl": "https://www.amazon.com/dp/0804139296?tag=ctocpublisher-20",
         "tags": ["business", "non-fiction", "bestseller", "startup"],
         "description": "Notes on Startups, or How to Build the Future"
@@ -93,7 +93,7 @@
         "author": "Stephen R. Covey",
         "price": 15.99,
         "alt": "7 Habits book cover",
-        "image": "/products/woman2.jpeg",
+        "image": "/7-habits.jpg",
         "amazonUrl": "https://www.amazon.com/dp/1982137274?tag=ctocpublisher-20",
         "tags": ["self-help", "non-fiction", "bestseller", "productivity"],
         "description": "Powerful Lessons in Personal Change"
@@ -104,65 +104,9 @@
         "author": "Michelle Obama",
         "price": 19.99,
         "alt": "Becoming memoir book cover",
-        "image": "/products/woman3.jpeg",
+        "image": "/becoming.jpg",
         "amazonUrl": "https://www.amazon.com/dp/1524763136?tag=ctocpublisher-20",
         "tags": ["memoir", "non-fiction", "bestseller", "biography"],
         "description": "The intimate, powerful, and inspiring memoir by the former First Lady of the United States."
-    },
-    {
-        "productCode": "1668001225",
-        "name": "It Starts with Us",
-        "author": "Colleen Hoover",
-        "price": 16.99,
-        "alt": "It Starts with Us book cover",
-        "image": "/products/woman4.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/1668001225?tag=ctocpublisher-20",
-        "tags": ["romance", "contemporary", "bestseller", "fiction"],
-        "description": "The sequel to It Ends with Us, a novel about a woman learning to heal."
-    },
-    {
-        "productCode": "1984806750",
-        "name": "People We Meet on Vacation",
-        "author": "Emily Henry",
-        "price": 14.99,
-        "alt": "People We Meet on Vacation book cover",
-        "image": "/products/woman5.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/1984806750?tag=ctocpublisher-20",
-        "tags": ["romance", "contemporary", "bestseller", "fiction"],
-        "description": "A romantic comedy about two best friends who take one last vacation together."
-    },
-    {
-        "productCode": "0593441273",
-        "name": "Happy Place",
-        "author": "Emily Henry",
-        "price": 18.99,
-        "alt": "Happy Place book cover",
-        "image": "/products/woman6.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/0593441273?tag=ctocpublisher-20",
-        "tags": ["romance", "contemporary", "bestseller", "fiction"],
-        "description": "A group of college friends reunite for one last week at their beach house."
-    },
-    {
-        "productCode": "0593336840",
-        "name": "Love, Theoretically",
-        "author": "Ali Hazelwood",
-        "price": 17.99,
-        "alt": "Love, Theoretically book cover",
-        "image": "/products/pdp1.jpeg",
-        "amazonUrl": "https://www.amazon.com/dp/0593336840?tag=ctocpublisher-20",
-        "tags": ["romance", "contemporary", "bestseller", "fiction", "stem"],
-        "description": "A theoretical physicist's life gets complicated when she meets her academic rival."
-    },
-    {
-        "productCode": "B0FG1BJTDL",
-        "name": "The Thursday Murder Club",
-        "author": "Richard Osman",
-        "price": 12.99,
-        "alt": "The Thursday Murder Club book cover",
-        "image": "/products/pdp2.jpeg",
-        "amazonUrl": "https://www.amazon.co.uk/dp/B0FG1BJTDL?tag=ctocpublisher-20",
-        "amazonUrlUK": "https://www.amazon.co.uk/dp/B0FG1BJTDL?tag=ctocpublisher-20",
-        "tags": ["mystery", "cozy-mystery", "bestseller", "fiction", "uk"],
-        "description": "Four unlikely friends meet weekly to investigate cold cases. When a real murder occurs, they find themselves in the middle of their first live case."
     }
 ]

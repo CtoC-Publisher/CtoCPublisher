@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as styles from './ProductCard.module.css';
-
+import { CartContext } from '../../context/CartProvider';
 import CurrencyFormatter from '../CurrencyFormatter';
 
 const ProductCard = (props) => {
@@ -12,8 +12,17 @@ const ProductCard = (props) => {
     originalPrice,
     meta,
     author,
-    amazonUrl
+    amazonUrl,
+    productCode
   } = props;
+  
+  const { addToCart } = useContext(CartContext);
+  
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart({ productCode, name, author, price, image, amazonUrl });
+  };
 
   return (
     <div className={styles.root}>
@@ -39,6 +48,12 @@ const ProductCard = (props) => {
           </div>
           <span className={styles.meta}>{meta}</span>
         </a>
+        <button 
+          onClick={handleAddToCart}
+          className={styles.addToCartBtn}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
