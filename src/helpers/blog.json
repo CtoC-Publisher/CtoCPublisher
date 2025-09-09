@@ -3,7 +3,7 @@
         "title": "Why 'Atomic Habits' Changed My Reading Life",
         "category": "book review",
         "alt": "Atomic Habits book review",
-        "image": "/blogs/blog1.png",
+        "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop&crop=center",
         "link": "/blog/atomic-habits-review",
         "excerpt": "James Clear's masterpiece on habit formation isn't just another self-help book. Discover how tiny changes compound into remarkable results and why this book belongs on every reader's shelf."
     },
@@ -11,7 +11,7 @@
         "title": "The Rise of BookTok: How Social Media is Changing Reading",
         "category": "book trends",
         "alt": "BookTok social media reading trends",
-        "image": "/blogs/blog2.png",
+        "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400&h=300&fit=crop&crop=center",
         "link": "/blog/booktok-trends",
         "excerpt": "From Colleen Hoover to fantasy romance, explore how TikTok is reshaping what we read and how independent bookshops can embrace this digital revolution."
     },
@@ -19,7 +19,7 @@
         "title": "Staff Pick: Hidden Gems in Non-Fiction",
         "category": "staff picks",
         "alt": "Non-fiction book recommendations",
-        "image": "/blogs/blog3.png",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=center",
         "link": "/blog/nonfiction-gems",
         "excerpt": "Beyond the bestsellers lie incredible non-fiction works waiting to be discovered. Our team shares their favorite underrated books that deserve your attention."
     }
